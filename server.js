@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 app.set('view engine', 'ejs')
-app.use('/assets', express.static('assets'))
+app.use('/', express.static('assets'))
 
 require('dotenv').config()
 
@@ -41,6 +41,7 @@ app.use(function (req, res, next) {
 });
 
 app.use("/", require("./routes/Home.routes"));
+app.use("/users", require('./routes/User.routes'));
 
 app.use((req, res, next) => {
     const err = new Error("Error 404! Not Found!");
