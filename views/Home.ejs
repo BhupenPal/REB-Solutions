@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="/assets/css/Home.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <%-include("./Components/Header.ejs") %>
+    <div class="home-page">
+        <div class="home-banner">
+            <div class="banner-head">
+                <h1>One Discovery tool for your research<br />needs</h1>
+                <button class="search-button">Search</button>
+            </div>
+            <div class="banner-img">
+                <img src="/assets/images/svgs/home-banner.svg" alt="">
+            </div>
+        </div>
+        <br /><br /><br /><br />
+        <div class="home-display">
+            <div class="search-bar">
+                <div class="industry flex-ar-cen">
+                    <div class="search-info">
+                        <img src="/assets/images/svgs/search.svg" alt="">
+                        <h2>Industry Type</h2>
+                    </div>
+                    <img src="/assets/images/svgs/dropdown-arrow.svg" alt="">
+                </div>
+                <div class="city flex-ar-cen">
+                    <div class="search-info">
+                        <img src="/assets/images/svgs/map-pin.svg" alt="">
+                        <h2>City</h2>
+                    </div>
+                    <img src="/assets/images/svgs/dropdown-arrow.svg" alt="">
+                </div>
+                <div class="country flex-ar-cen">
+                    <div class="search-info">
+                        <img src="/assets/images/svgs/map.svg" alt="">
+                        <h2>Country</h2>
+                    </div>
+                    <img src="/assets/images/svgs/dropdown-arrow.svg" alt="">
+                    <button class="search-button">Search</button>
+                </div>
+            </div>
+            <div class="home-illus">
+                <div class="single-illus">
+                    <img src="/assets/images/svgs/executives.svg" alt="">
+                    <h2>10000+<br />Executives</h2>
+                </div>
+                <hr />
+                <div class="single-illus">
+                    <img src="/assets/images/svgs/companies.svg" alt="">
+                    <h2>30000+<br />Companies</h2>
+                </div>
+                <hr />
+                <div class="single-illus">
+                    <img src="/assets/images/svgs/industries.svg" alt="">
+                    <h2>100+<br />Industries</h2>
+                </div>
+            </div>
+        </div>
+        <div class="home-about">
+            <img src="/assets/images/svgs/home-about.svg" alt="">
+            <div class="about-details">
+                <h3>About Us</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus explicabo, molestiae consequatur
+                    laborum voluptate esse officiis quo est blanditiis adipisci assumenda recusandae fuga, error placeat
+                    accusantium mollitia. Consequatur laboriosam iusto obcaecati, dolore error quia ipsum dicta laborum,
+                    sunt eius, nesciunt aperiam alias commodi eaque minus!
+                </p>
+            </div>
+        </div>
+        <div class="home-clients">
+            <h3>Our Clients</h3>
+            <div class="client-grp">
+                <div class="client-container">
+                    <div class="client"></div>
+                    <div class="client"></div>
+                </div>
+                <div class="client-container">
+                    <div class="client"></div>
+                    <div class="client"></div>
+                    <div class="client"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include("./Components/Footer.ejs") %>
 </body>
+
 </html>

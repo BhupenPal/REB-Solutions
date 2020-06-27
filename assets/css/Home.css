@@ -1,0 +1,171 @@
+.home-page {
+    padding-top: 120px;
+}
+
+.home-banner {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-head {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.banner-head h1 {
+    font-size: 40px;
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+.search-button {
+    width: 205px;
+    height: 50px;
+    background-color: #335CC4;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.banner-img {
+    width: 70%;
+}
+
+.banner-img img {
+    /* svg file has white space in the right */
+    width: 110%;
+}
+
+.home-display {
+    background-color: rgba(245, 245, 245, 0.555);
+    padding: 60px 0 92px;
+}
+
+.search-bar {
+    width: 75%;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 104px;
+    background-color: white;
+    display: flex;
+    font-family: "Poppins";
+    font-weight: 500;
+    margin: 0 auto 120px;
+}
+
+.search-bar .search-button {
+    width: 230px;
+    height: 62px;
+}
+
+.search-info {
+    display: flex;
+}
+
+.search-info h2 {
+    margin-left: 20px;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.flex-ar-cen {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.industry {
+    width: 29%;
+}
+
+.city {
+    width: 23%;
+    border-left: 0.2px solid rgba(0, 0, 0, 0.301);
+    border-right: 0.2px solid rgba(0, 0, 0, 0.301);
+}
+
+.country {
+    width: 48%;
+}
+
+.home-illus {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-illus hr {
+    height: 320px;
+    background-color: rgba(0, 0, 0, 0.301);
+    border: none;
+    width: 1px;
+    margin: 0;
+}
+
+.single-illus h2 {
+    text-align: center;
+    font-family: "Lato";
+    font-size: 40px;
+}
+
+.home-about {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 80px 0 60px;
+}
+
+.about-details {
+    width: 50%;
+    font-family: "Poppins";
+}
+
+.about-details h3 {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.about-details p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.home-clients {
+    padding: 35px 0 85px;
+    background-color: rgba(245, 245, 245, 0.555);
+    margin: 0 auto;
+    font-family: "Poppins";
+}
+
+.home-clients h3 {
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.client-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 75px;
+}
+
+.client {
+    background-color: #C4C4C4;
+    border-radius: 10px;
+    width: 400px;
+    height: 100px;
+}
