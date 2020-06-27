@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+}
+
+/* ----------------------------HEADER starts----------------------------- */
+
+#Head {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+
+.sub-head {
+    display: flex;
+    padding: 10px 2%;
+    align-items: center;
+}
+
+.header-menu {
+    width: 70%;
+}
+
+.header-menu ul {
+    list-style: none;
+    align-items: center;
+    display: flex;
+}
+
+.header-menu ul li {
+    font-size: 18px;
+    margin-left: 70px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.header-login ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-login ul li {
+    font-size: 18px;
+    margin-left: 50px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    border: none;
+    padding: 0;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* ----------------------------HEADER ends----------------------------- */
+
+/* ----------------------------FOOTER starts----------------------------- */
+
+#Footer {
+    background-color: black;
+    width: 100%;
+}
+
+.sub-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+#rights {
+    font-weight: 400;
+}
+
+.sub-foot a {
+    color: white;
+    font-family: "Poppins";
+    font-weight: 600;
+    text-align: center;
+    font-size: 26px;
+}
+
+.social img {
+    margin: 0 10px;
+}
+
+/* ----------------------------FOOTER ends----------------------------- */
+
+@media only screen and (max-width: 480px) {
+    .sub-head {
+        justify-content: space-between;
+        padding: 10px 5%;
+    }
+
+    .Logo {
+        width: 70px;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    .header-login {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        width: 25px;
+        padding: 8px 10px;
+        border-radius: 8px;
+    }
+
+    .bar-1,
+    .bar-2,
+    .bar-3 {
+        width: 25px;
+        height: 4px;
+        margin: 2.5px 0;
+        background-color: black;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+}
+
+
