@@ -27,25 +27,37 @@
         <div class="home-display">
             <div class="search-bar">
                 <div class="industry flex-ar-cen">
+                    <img src="/assets/images/svgs/search.svg" alt="">
                     <div class="search-info">
-                        <img src="/assets/images/svgs/search.svg" alt="">
-                        <h2>Industry Type</h2>
+                        <select name="industry-list" id="">
+                            <option disabled selected>Industry Type</option>
+                            <option value="One">One</option>
+                            <option value="Two">Two</option>
+                            <option value="Three">Three</option>
+                        </select>
                     </div>
-                    <img src="/assets/images/svgs/dropdown-arrow.svg" alt="">
                 </div>
                 <div class="city flex-ar-cen">
-                    <div class="search-info">
-                        <img src="/assets/images/svgs/map-pin.svg" alt="">
-                        <h2>City</h2>
+                    <img src="/assets/images/svgs/map-pin.svg" alt="">
+                    <div class="search-info city-select">
+                        <select name="city-list" id="">
+                            <option disabled selected>City</option>
+                            <option value="One">One</option>
+                            <option value="Two">Two</option>
+                            <option value="Three">Three</option>
+                        </select>
                     </div>
-                    <img src="/assets/images/svgs/dropdown-arrow.svg" alt="">
                 </div>
                 <div class="country flex-ar-cen">
-                    <div class="search-info">
-                        <img src="/assets/images/svgs/map.svg" alt="">
-                        <h2>Country</h2>
+                    <img src="/assets/images/svgs/map.svg" alt="">
+                    <div class="search-info country-select">
+                        <select name="country-list" id="">
+                            <option disabled selected>Country</option>
+                            <option value="One">One</option>
+                            <option value="Two">Two</option>
+                            <option value="Three">Three</option>
+                        </select>
                     </div>
-                    <img src="/assets/images/svgs/dropdown-arrow.svg" alt="">
                     <button class="search-button">Search</button>
                 </div>
             </div>
@@ -94,6 +106,7 @@
         </div>
     </div>
     <%-include("./Components/Footer.ejs") %>
+    <script src="/assets/scripts/index.js"></script>
 </body>
 
 </html>

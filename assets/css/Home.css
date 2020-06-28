@@ -59,41 +59,65 @@
     margin: 0 auto 120px;
 }
 
-.search-bar .search-button {
-    width: 230px;
-    height: 62px;
-}
-
-.search-info {
-    display: flex;
-}
-
-.search-info h2 {
-    margin-left: 20px;
-    font-family: "Lato";
-    font-weight: 400;
-    font-size: 26px;
-}
-
-.flex-ar-cen {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-}
 
 .industry {
     width: 29%;
 }
 
 .city {
-    width: 23%;
+    width: 22%;
     border-left: 0.2px solid rgba(0, 0, 0, 0.301);
     border-right: 0.2px solid rgba(0, 0, 0, 0.301);
 }
 
 .country {
-    width: 48%;
+    width: 49%;
+}
+
+.flex-ar-cen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.search-bar .search-button {
+    width: 230px;
+    height: 62px;
+    margin-left: 50px;
+}
+
+.search-info {
+    display: flex;
+    margin-left: 15px;
+}
+
+.search-info select {
+    width: 220px;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 26px;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("/assets/images/svgs/dropdown-arrow.svg");
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 10px;
+    padding: 0 5px;
+}
+
+.search-info select option {
+    font-size: 20px;
+}
+
+.city-select {
+    width: 140px;
+}
+
+.country-select {
+    width: 160px;
 }
 
 .home-illus {
