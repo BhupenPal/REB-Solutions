@@ -13,19 +13,16 @@ body {
 
 .sub-head {
     display: flex;
-    padding: 10px 2%;
+    padding: 10px 3%;
     align-items: center;
     box-shadow: 0px 10px 61px #00000017;
-}
-
-.header-menu {
-    width: 70%;
 }
 
 .header-menu ul {
     list-style: none;
     align-items: center;
     display: flex;
+    margin: 0;
 }
 
 .header-menu ul li {
@@ -35,11 +32,16 @@ body {
     font-weight: 500;
 }
 
+.header-login {
+    margin-left: auto;
+}
+
 .header-login ul {
     list-style: none;
     padding: 0;
     display: flex;
     align-items: center;
+    margin: 0;
 }
 
 .header-login ul li {
@@ -52,6 +54,10 @@ body {
 a {
     text-decoration: none;
     color: black;
+}
+
+#bell {
+    margin-top: 5px;
 }
 
 button {
@@ -117,7 +123,7 @@ button {
 
 /* ----------------------------FOOTER ends----------------------------- */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
     .sub-head {
         justify-content: space-between;
         padding: 10px 5%;
@@ -152,7 +158,7 @@ button {
     }
 
     .change .bar1 {
-        transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-6px, 7px);
     }
 
     .change .bar2 {
@@ -160,7 +166,7 @@ button {
     }
 
     .change .bar3 {
-        transform: rotate(45deg) translate(-6px, -6px);
+        transform: rotate(45deg) translate(-6px, -7px);
     }
 
     .ham-menu {
@@ -227,7 +233,6 @@ button {
     }
 
     .foot-menu a {
-        text-align: start;
         margin: 2.5vw 0;
     }
 
@@ -238,5 +243,222 @@ button {
 
     .social {
         margin-top: 10vw;
+    }
+
+    .social img {
+        width: 6.25vw;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .sub-head {
+        justify-content: space-between;
+        padding: 10px 5%;
+    }
+
+    .Logo {
+        width: 70px;
+    }
+
+    .header-menu,
+    .header-login {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        width: 25px;
+        padding: 8px 10px;
+        border-radius: 8px;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 25px;
+        height: 4px;
+        margin: 2.5px 0;
+        background-color: black;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    .change .bar1 {
+        transform: rotate(-45deg) translate(-6px, 7px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        transform: rotate(45deg) translate(-6px, -7px);
+    }
+
+    .ham-menu {
+        position: absolute;
+        width: 100%;
+        height: 52vw;
+        box-sizing: border-box;
+        background-color: white;
+        box-shadow: 0px 15px 31px #e7e7e7;
+        display: flex;
+        align-items: center;
+        transition: 0.4s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -5;
+    }
+
+    .hide {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+    }
+
+    .ham-menu ul {
+        margin: 0;
+        list-style: none;
+        padding: 0 12%;
+    }
+
+    .ham-menu li {
+        font-size: 4.2vw;
+        font-family: "Poppins";
+        padding: 3% 0;
+    }
+
+    #bell-ham {
+        margin-left: 8vw;
+        margin-bottom: 12vw;
+    }
+
+    #bell-ham img {
+        width: 11vw;
+    }
+
+    .sub-foot {
+        padding: 3vw 0;
+    }
+
+    .foot-section {
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .foot-menu {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 50%;
+        padding-right: 8%;
+        box-sizing: border-box;
+    }
+
+    .sub-foot a {
+        font-size: 3.5vw;
+    }
+
+    .foot-menu a {
+        margin: 2vw 0;
+    }
+
+    #rights {
+        width: 90%;
+    }
+
+    .social {
+        margin-top: 10vw;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .Logo {
+        width: 8vw;
+    }
+
+    .header-menu ul {
+        padding: 0;
+    }
+
+    .header-menu ul li {
+        font-size: 1.75vw;
+        margin-left: 4vw;
+    }
+
+    .header-login ul li {
+        font-size: 1.75vw;
+        margin-left: 3.5vw;
+    }
+
+    #bell {
+        width: 3vw;
+    }
+
+    .sub-foot {
+        padding: 2vw 0;
+    }
+
+    .foot-section {
+        width: 40%;
+    }
+
+    .foot-menu {
+        width: 60%;
+    }
+
+    .sub-foot a {
+        font-size: 1.8vw;
+    }
+
+    .social img {
+        width: 2.8vw;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .Logo {
+        width: 8vw;
+    }
+
+    .header-menu ul li {
+        margin-left: 4vw;
+    }
+
+    .header-login ul li {
+        margin-left: 3.5vw;
+    }
+
+    #bell {
+        width: 2.6vw;
+    }
+
+    .sub-foot {
+        padding: 2vw 0;
+    }
+
+    .foot-section {
+        width: 40%;
+    }
+
+    .foot-menu {
+        width: 60%;
+    }
+
+    .sub-foot a {
+        font-size: 1.8vw;
+    }
+}
+
+@media only screen and (min-width: 1550px) and (max-width: 1920px) {
+    .header-menu ul li {
+        font-size: 1.15vw;
+    }
+    .header-login ul li {
+        font-size: 1.15vw;
+    }
+
+    #bell {
+        width: 2.2vw;
     }
 }
