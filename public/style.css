@@ -1,0 +1,546 @@
+body{
+  background: white;
+  color: black;
+position: relative;
+  font-family: Poppins,serif;
+}
+button{
+  cursor: pointer;
+}
+a:hover{
+  font-weight: bold;
+}
+#navbar{
+position: absolute;
+  top: 52px;
+}
+a:link{
+  text-decoration: none;
+  color: black;
+}
+#logo{
+  position: absolute;
+width: 113px;
+height: 112px;
+left: 31px;
+/* top: 20px; */
+
+}
+#Home{
+  cursor: pointer;
+  position: absolute;
+width: 57px;
+height: 27px;
+left: 248px;
+/* top: 52px; */
+background: rgba(255,255,255,0.1);
+border: 0px;
+
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+}
+#companies{
+  cursor: pointer;
+  position: absolute;
+width: 265px;
+height: 27px;
+left: 374px;
+/* top: 52px; */
+background: rgba(255,255,255,0.1);
+border: 0px;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+}
+#Bookmark{
+  cursor: pointer;
+  position: absolute;
+width: 264px;
+height: 27px;
+left: 603px;
+/* top: 52px; */
+background: rgba(255,255,255,0.1);
+border: 0px;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+
+}
+#notif{
+  position: absolute;
+left: 1150px;
+right: 18.68%;
+top: -10px;
+bottom: 90.8%;
+cursor: pointer;
+
+}
+#join{
+  position: absolute;
+width: 65px;
+height: 27px;
+left: 1225px;
+/* top: 55px; */
+
+
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+}
+#login{
+  position: absolute;
+width: 49px;
+height: 27px;
+left: 1326px;
+/* top: 55px; */
+
+
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+}
+#image{
+  position: absolute;
+width: 944px;
+height: 512px;
+left: 512px;
+top: 149px;
+}
+#text{
+  position: absolute;
+width: 445px;
+height: 180px;
+left: 88px;
+top: 244px;
+
+font-style: normal;
+font-weight: 600;
+font-size: 40px;
+line-height: 60px;
+
+color: #000000;
+}
+#search{
+
+position: absolute;
+width: auto;
+height: 50px;
+left: 91px;
+top: 458px;
+
+}
+#searchButton{
+  background: #335CC4;
+color: white;
+border-radius: 5px;
+/* font-size: 20px; */
+padding: 10px 40px;
+cursor: pointer;
+font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 26px;
+line-height: 31px;
+}
+#searchCompanies{
+  position: relative;
+width: 900px;
+height: 104px;
+left: 228px;
+top: 794px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+
+}
+#left{
+  border-left: 6px solid black;
+}
+
+#searchText{
+  position: absolute;
+  width: 155px;
+  height: 45px;
+  left: 15%;
+  top: 32%;
+
+  font-family: Lato,serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 31px;
+border: 0px;
+text-decoration: none;
+  color: #000000;
+
+}
+input {border-style:none;}
+#searchIcon{
+  position: absolute;
+  left: 12.5%;
+  right: 20.83%;
+  top: 40%;
+  bottom: 20.83%;
+
+
+}
+#downArrow{
+  position: absolute;
+left: 34%;
+top: 38%;
+bottom: 37.5%;
+
+
+}
+
+/* .border{
+  position: absolute;
+width: 104px;
+height: 0px;
+left: 33%;
+top: 50%;
+
+border: 0.2px solid #000000;
+transform: rotate(90deg);
+} */
+#locationIcon{
+  position: absolute;
+left: 38.5%;
+right: 37.5%;
+top: 37.17%;
+bottom: 45.83%;
+}
+#locationText{
+  position: absolute;
+width: 183px;
+height: 31px;
+left: 41%;
+top: 32.17%;
+
+font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 26px;
+line-height: 31px;
+}
+#companysearchButton{
+  position: absolute;
+width: 229px;
+height: 62px;
+left: 70%;
+top: 20%;
+background: #335CC3;
+border-radius: 10px;
+color: white;
+font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 26px;
+line-height: 31px;
+}
+#helpImage1{
+  position: absolute;
+width: 313px;
+height: 206px;
+left: 94px;
+top: 1056px;
+}
+#help1Text{
+  position: absolute;
+  width: 199px;
+  height: 96px;
+  left: 142px;
+  top: 1305px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+
+text-align: center;
+}
+#helpBorder1{
+  position: absolute;
+width: 320px;
+height: 0px;
+left: 315px;
+top: 1200px;
+
+border: 0.3px solid rgba(0,0,0,0.1);
+transform: rotate(90deg);
+}
+#helpImage2{
+  position: absolute;
+width: 313px;
+height: 206px;
+left: 600px;
+top: 1056px;
+
+}
+#help2Text{
+  position: absolute;
+  width: 199px;
+  height: 96px;
+  left: 650px;
+  top: 1310px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+}
+#helpBorder2{
+  position: absolute;
+width: 320px;
+height: 0px;
+left: 895px;
+top: 1200px;
+
+border: 0.3px solid rgba(0,0,0,0.1);
+transform: rotate(90deg);
+}
+#helpImage3{
+  position: absolute;
+width: 313px;
+height: 206px;
+left: 1150px;
+top: 1056px;
+}
+#help3Text{
+  position: absolute;
+width: 175px;
+height: 96px;
+left: 1210px;
+top: 1310px;
+
+font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 40px;
+line-height: 48px;
+text-align: center;
+
+}
+
+#aboutusImage{
+  position: absolute;
+width: 578px;
+height: 358px;
+left: 78px;
+top: 1574px;
+}
+#aboutusText{
+  position: absolute;
+width: 652px;
+height: 18px;
+left: 758px;
+top: 1657px;
+font-family: Lato,serif;
+font-size: 40px;
+line-height: 50px;
+}
+#aboutusHeading{
+  position: absolute;
+width: 181px;
+height: 60px;
+left: 950px;
+top: 1520px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 60px;
+}
+#ourclientsHeading{
+  position: absolute;
+width: 278px;
+height: 75px;
+left: 581px;
+top: 2020px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 50px;
+line-height: 75px;
+}
+#clientimage1{
+  position: absolute;
+width: 404px;
+height: 104px;
+left: 217px;
+top: 2180px;
+}
+#clientimage2{
+  position: absolute;
+width: 404px;
+height: 104px;
+left: 792px;
+top: 2178px;
+}
+#clientimage3{
+  position: absolute;
+width: 404px;
+height: 104px;
+left: 62px;
+top: 2354px;
+}
+#clientimage4{
+  position: absolute;
+width: 404px;
+height: 104px;
+left: 518px;
+top: 2354px;
+
+}
+#clientimage5{
+  position: absolute;
+width: 404px;
+height: 104px;
+left: 968px;
+top: 2352px;
+}
+#footer{
+  position: absolute;
+width: 100%;
+height: 180px;
+left: 0px;
+top: 2542px;
+
+background: #000000;
+}
+#allRights{
+  position: absolute;
+width: 244px;
+height: 78px;
+left: 39px;
+top: 50px;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+color: white;
+font-size: 26px;
+line-height: 39px;
+text-align: left;
+}
+#instagramLogo{
+  position: absolute;
+left: 25%;
+right: 33.15%;
+top: 33.15%;
+bottom: 33.51%;
+background: black;
+}
+#facebookLogo{
+  position: absolute;
+left: 30%;
+right: 33.15%;
+top: 33.15%;
+bottom: 33.51%;
+background: black;
+}
+#linkedinLogo{
+  position: absolute;
+left: 35%;
+right: 33.15%;
+top: 33.15%;
+bottom: 33.51%;
+background: black;
+}
+#footeraboutus a{
+  position: absolute;
+width: 119px;
+height: 39px;
+left: 750px;
+top: 68px;
+text-decoration: none;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 39px;
+/* identical to box height */
+
+text-align: center;
+
+color: white;
+
+}
+#footerourclients a{
+  position: absolute;
+width: 119px;
+height: 39px;
+left: 900px;
+top: 65px;
+text-decoration: none;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 39px;
+/* identical to box height */
+
+text-align: center;
+
+color: white;
+}
+#footerfindcompanies a{
+  position: absolute;
+width: 119px;
+height: 39px;
+left: 1050px;
+top: 65px;
+text-decoration: none;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 39px;
+/* identical to box height */
+
+text-align: center;
+
+color: white;
+}
+#footerbookmarks a{
+  position: absolute;
+width: 119px;
+height: 45px;
+left: 1250px;
+top: 65px;
+text-decoration: none;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 39px;
+/* identical to box height */
+
+text-align: center;
+
+color: white;
+}
+#facebookLogoCredit{
+  color: orange;
+  position: absolute;
+width: 100px;
+height: 100px;
+left: 1250px;
+top: 65px;
+text-decoration: none;
+font-family: Poppins;
+font-style: normal;
+font-size: 15px;
+line-height: 14px;
+}
