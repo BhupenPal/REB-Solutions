@@ -1,0 +1,882 @@
+.home-page {
+    padding-top: 120px;
+}
+
+.home-banner {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-head {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.banner-head h1 {
+    font-size: 40px;
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+.search-button {
+    width: 205px;
+    height: 50px;
+    background-color: #335CC4;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.banner-img {
+    width: 70%;
+}
+
+.banner-img img {
+    /* svg file has white space in the right */
+    width: 110%;
+}
+
+.home-display {
+    background-color: rgba(245, 245, 245, 0.555);
+    padding: 60px 0 92px;
+}
+
+.search-bar {
+    width: 75%;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 104px;
+    background-color: white;
+    display: flex;
+    font-family: "Poppins";
+    font-weight: 500;
+    margin: 0 auto 120px;
+}
+
+
+.industry {
+    width: 29%;
+}
+
+.city {
+    width: 22%;
+    border-left: 0.2px solid rgba(0, 0, 0, 0.3);
+    border-right: 0.2px solid rgba(0, 0, 0, 0.3);
+}
+
+.country {
+    width: 25%;
+}
+
+.search-container {
+    width: 24%;
+}
+
+.flex-ar-cen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.search-container .search-button {
+    width: 230px;
+    height: 62px;
+}
+
+.search-info {
+    display: flex;
+    margin-left: 15px;
+}
+
+.search-info select {
+    width: 220px;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 26px;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("/assets/images/svgs/dropdown-arrow.svg");
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 10px;
+    padding: 0 5px;
+}
+
+.search-info select option {
+    font-size: 20px;
+}
+
+.city-select {
+    width: 140px;
+}
+
+.country-select {
+    width: 170px;
+}
+
+.home-illus {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-illus hr {
+    height: 320px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    width: 1px;
+    margin: 0;
+}
+
+.single-illus h2 {
+    text-align: center;
+    font-family: "Lato";
+    font-size: 40px;
+}
+
+.home-about {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 80px 0 60px;
+}
+
+.about-details {
+    width: 50%;
+    font-family: "Poppins";
+}
+
+.about-details h3 {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.about-details p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.home-clients {
+    padding: 35px 0 85px;
+    background-color: rgba(245, 245, 245, 0.555);
+    margin: 0 auto;
+    font-family: "Poppins";
+}
+
+.home-clients h3 {
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.client-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 75px;
+}
+
+.client {
+    background-color: #C4C4C4;
+    border-radius: 10px;
+    width: 400px;
+    height: 100px;
+}
+
+@media only screen and (max-width: 576px) {
+    .home-page {
+        padding-top: 18vh;
+    }
+
+    .home-banner {
+        flex-direction: column-reverse;
+        width: 95%;
+    }
+
+    .banner-img {
+        width: auto;
+    }
+
+    .banner-img img {
+        width: 100%;
+    }
+
+    .banner-head {
+        width: 100%;
+        margin-top: 4vh;
+        align-items: center;
+    }
+
+    .banner-head h1 {
+        text-align: center;
+        width: 90vw;
+        font-size: 8.4vw;
+    }
+
+    .banner-head .search-button {
+        margin-top: 3vh;
+        margin-bottom: 5vh;
+        width: 42.8vw;
+        height: 10.4vw;
+    }
+
+    .search-button {
+        font-size: 4.2vw;
+    }
+
+    .home-display {
+        padding: 9vh 0 5vw;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        width: 75%;
+        height: auto;
+        border-radius: 4vw;
+        margin-bottom: 10vw;
+    }
+
+    .industry,
+    .city,
+    .country,
+    .search-container {
+        width: 100%;
+        padding: 6vw 0;
+    }
+
+    .country {
+        border-bottom: 0.3px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .city {
+        border-left: none;
+        border-right: none;
+        border-top: 0.3px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 0.3px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .search-info select {
+        font-size: 5.5vw;
+        background-size: 4.6vw;
+    }
+
+    .search-info select option {
+        font-size: 4vw;
+    }
+
+    .search-info select,
+    .city-select,
+    .country-select {
+        width: 49vw;
+    }
+
+    .flex-ar-cen img {
+        width: 8.3vw;
+    }
+
+    .search-container .search-button {
+        width: 47vw;
+        height: 13vw;
+    }
+
+    .home-illus {
+        flex-direction: column;
+    }
+
+    .home-illus hr {
+        height: 0.7px;
+        width: 80vw;
+    }
+
+    .single-illus {
+        margin-top: 10vw;
+    }
+
+    .single-illus h2 {
+        font-size: 8.3vw;
+        margin: 5vw 0 10vw;
+    }
+
+    .home-about {
+        flex-direction: column-reverse;
+        width: 90%;
+        padding: 12vw 0;
+    }
+
+    .about-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-details h3 {
+        font-size: 9.5vw;
+        margin-bottom: 6vw;
+    }
+
+    .about-details p {
+        width: 95%;
+        margin: 0 auto;
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+
+    .home-clients {
+        padding: 12vw 0 18vw;
+    }
+
+    .home-clients h3 {
+        margin-bottom: 2vw;
+        font-size: 9.5vw;
+        font-weight: 700;
+    }
+
+    .client-container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .client {
+        margin-top: 7vw;
+        width: 90%;
+        height: 17vw;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .home-page {
+        padding-top: 18vh;
+    }
+
+    .home-banner {
+        flex-direction: column-reverse;
+        width: 95%;
+    }
+
+    .banner-img {
+        width: auto;
+        text-align: center;
+    }
+
+    .banner-img img {
+        width: 80%;
+    }
+
+    .banner-head {
+        width: 100%;
+        margin-top: 4vh;
+        align-items: center;
+    }
+
+    .banner-head h1 {
+        text-align: center;
+        width: 70vw;
+        font-size: 6vw;
+    }
+
+    .banner-head .search-button {
+        margin-top: 3vh;
+        margin-bottom: 5vh;
+        width: 31vw;
+        height: 7.5vw;
+    }
+
+    .search-button {
+        font-size: 3vw;
+    }
+
+    .home-display {
+        padding: 8vw 0 3vw;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        width: 60%;
+        height: auto;
+        border-radius: 4vw;
+        margin-bottom: 8vw;
+    }
+
+    .industry,
+    .city,
+    .country,
+    .search-container {
+        width: 100%;
+        padding: 6vw 0;
+    }
+
+    .country {
+        border-bottom: 0.3px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .city {
+        border-left: none;
+        border-right: none;
+        border-top: 0.3px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 0.3px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .search-info {
+        margin-left: 2.5vw;
+    }
+
+    .search-info select {
+        font-size: 4.5vw;
+        background-size: 4vw;
+    }
+
+    .search-info select option {
+        font-size: 3vw;
+    }
+
+    .search-info select,
+    .city-select,
+    .country-select {
+        width: 40vw;
+    }
+
+    .flex-ar-cen img {
+        width: 5.5vw;
+    }
+
+    .search-container .search-button {
+        width: 37vw;
+        height: 9vw;
+    }
+
+    .home-illus {
+        flex-direction: column;
+    }
+
+    .home-illus hr {
+        height: 0.7px;
+        width: 80vw;
+    }
+
+    .single-illus {
+        margin-top: 6vw;
+    }
+
+    .single-illus img {
+        width: 50vw;
+    }
+
+    .single-illus h2 {
+        font-size: 5vw;
+        margin: 3vw 0 6vw;
+    }
+
+    .home-about {
+        flex-direction: column-reverse;
+        width: 90%;
+        padding: 8vw 0;
+    }
+
+    .about-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-details h3 {
+        font-size: 7vw;
+        margin-bottom: 6vw;
+    }
+
+    .about-details p {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 2.8vw;
+        line-height: 4vw;
+    }
+
+    .home-about img {
+        width: 60vw;
+        margin: 5vw auto 2vw;
+    }
+
+    .home-clients {
+        padding: 8vw 0 12vw;
+    }
+
+    .home-clients h3 {
+        margin-bottom: 2vw;
+        font-size: 7vw;
+        font-weight: 700;
+    }
+
+    .client-container {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .client {
+        margin-top: 5vw;
+        width: 40%;
+        height: 11vw;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .banner-head {
+        width: 35%;
+        margin-top: 5vw;
+    }
+
+    .banner-head h1 {
+        font-size: 3.1vw;
+    }
+
+    .banner-img {
+        width: 65%;
+    }
+
+    .search-button {
+        font-size: 1.75vw;
+        width: 17.5vw;
+        height: 4.3vw;
+    }
+
+    .home-display {
+        padding: 6vw 0 7.8vw;
+    }
+
+    .search-bar {
+        width: 90%;
+        height: 10.5vw;
+        margin-bottom: 10vw;
+    }
+
+    .flex-ar-cen img {
+        width: 3vw;
+    }
+
+    .search-info {
+        margin-left: 1vw;
+    }
+
+    .search-info select {
+        width: 18.5vw;
+        font-size: 2.3vw;
+        background-size: 1.9vw;
+    }
+
+    .city-select {
+        width: 11vw;
+    }
+
+    .country-select {
+        width: 14vw;
+    }
+
+    .search-container .search-button {
+        width: 19vw;
+        height: 5vw;
+    }
+
+    .search-info select option {
+        font-size: 1.75vw;
+    }
+
+    .home-illus hr {
+        height: 27vw;
+        width: 0.1vw;
+    }
+
+    .single-illus img {
+        width: 25vw;
+    }
+
+    .single-illus h2 {
+        font-size: 3.2vw;
+        margin: 1.5vw 0 4vw;
+    }
+
+    .home-about {
+        width: 95%;
+        padding: 6vw 0;
+    }
+
+    .home-about img {
+        width: 48vw;
+    }
+
+    .about-details {
+        width: 46%;
+    }
+
+    .about-details h3 {
+        font-size: 3.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .about-details p {
+        width: 95%;
+        font-size: 1.5vw;
+        line-height: normal;
+    }
+
+    .home-clients {
+        padding: 4vw 0 8vw;
+    }
+
+    .home-clients h3 {
+        font-size: 4vw;
+    }
+
+    .client-container {
+        width: 95%;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .client {
+        width: 40%;
+        height: 9vw;
+        margin-top: 5vw;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .home-banner {
+        padding: 3vw 0 2vw;
+    }
+
+    .banner-head {
+        width: 35%;
+        margin-top: 3vw;
+    }
+
+    .banner-head h1 {
+        font-size: 3.1vw;
+    }
+
+    .banner-img {
+        width: 65%;
+    }
+
+    .search-button {
+        font-size: 1.6vw;
+        width: 17vw;
+        height: 4.1vw;
+    }
+
+    .home-display {
+        padding: 5vw 0 6.5vw;
+    }
+
+    .search-bar {
+        width: 85%;
+        height: 8.7vw;
+        margin-bottom: 9vw;
+    }
+
+    .flex-ar-cen img {
+        width: 2.7vw;
+    }
+
+    .search-info {
+        margin-left: 1vw;
+    }
+
+    .search-info select {
+        width: 18vw;
+        font-size: 2.1vw;
+        background-size: 1.9vw;
+    }
+
+    .city-select {
+        width: 10.5vw;
+    }
+
+    .country-select {
+        width: 13.5vw;
+    }
+
+    .search-container .search-button {
+        width: 18vw;
+        height: 4.8vw;
+    }
+
+    .search-info select option {
+        font-size: 1.75vw;
+    }
+
+    .home-illus hr {
+        height: 27vw;
+        width: 0.1vw;
+    }
+
+    .single-illus img {
+        width: 25vw;
+    }
+
+    .single-illus h2 {
+        font-size: 3.2vw;
+        margin: 1.5vw 0 4vw;
+    }
+
+    .home-about {
+        width: 90%;
+        padding: 5.5vw 0;
+    }
+
+    .home-about img {
+        width: 45vw;
+    }
+
+    .about-details {
+        width: 46%;
+    }
+
+    .about-details h3 {
+        font-size: 3.35vw;
+        margin-bottom: 2vw;
+    }
+
+    .about-details p {
+        font-size: 1.3vw;
+        line-height: 2.1vw;
+    }
+
+    .home-clients {
+        padding: 4vw 0 8vw;
+    }
+
+    .home-clients h3 {
+        font-size: 4vw;
+    }
+
+    .client-container {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .client {
+        width: 33.3vw;
+        height: 8.3vw;
+        margin-top: 5vw;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1500px) {
+    .home-banner {
+        padding: 3vw 0 2vw;
+    }
+
+    .banner-head {
+        width: 35%;
+        margin-top: 3vw;
+    }
+
+    .banner-head h1 {
+        font-size: 3.1vw;
+    }
+
+    .banner-img {
+        width: 65%;
+    }
+
+    .search-button {
+        font-size: 1.33vw;
+        width: 13.7vw;
+        height: 3.34vw;
+    }
+
+    .flex-ar-cen img {
+        width: 2.6vw;
+    }
+
+    .search-info select {
+        width: 14.7vw;
+        font-size: 1.73vw;
+        background-size: 1.5vw;
+    }
+
+    .city-select {
+        width: 9.35vw;
+    }
+
+    .country-select {
+        width: 11.36vw;
+    }
+
+    .search-container .search-button {
+        width: 15.37vw;
+        height: 4.15vw;
+    }
+
+    .single-illus h2 {
+        font-size: 2.67vw;
+    }
+
+    .home-about {
+        width: 90%;
+        padding: 5.5vw 0;
+    }
+
+    .home-about img {
+        width: 45vw;
+    }
+
+    .about-details {
+        width: 46%;
+    }
+
+    .client {
+        width: 26.7vw;
+        height: 6.68vw;
+    }
+}
+
+@media only screen and (min-width: 1550px) and (max-width: 1920px) {
+    .home-banner {
+        padding: 1.5vw 0 1vw;
+    }
+
+    .banner-head {
+        margin-top: 6vw;
+    }
+
+    .banner-head h1 {
+        font-size: 2.6vw;
+    }
+
+    .single-illus img {
+        width: 20vw;
+    }
+
+    .home-about img {
+        width: 35vw;
+    }
+
+    .about-details h3 {
+        font-size: 2.4vw;
+    }
+
+    .about-details p {
+        font-size: 1vw;
+    }
+
+    .home-clients h3 {
+        font-size: 2.8vw;
+    }
+
+    .client{
+        width: 23vw;
+    }
+}

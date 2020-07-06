@@ -1,3 +1,7 @@
+# Dependency directories
 node_modules/
-REB-solutions-ankit/
 .DS_Store
+.adminbro/
+
+# dotenv environment variables file
+.env

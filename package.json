@@ -1,29 +1,36 @@
 {
-  "name": "reb-project1",
+  "name": "reb-project",
   "version": "1.0.0",
   "description": "This is the reb project files",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start" : "node index.js",
-    "dev" : "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "github.com/BhupenPal/REB-Solutions "
+    "url": "git+https://github.com/BhupenPal/REB-Solutions.git"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "admin-bro": "^2.6.0",
+    "admin-bro-expressjs": "^2.1.1",
+    "admin-bro-mongoose": "^0.5.2",
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.3",
     "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.21",
-    "validator": "^13.1.1"
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.20",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-
-  }
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/BhupenPal/REB-Solutions/issues"
+  },
+  "homepage": "https://github.com/BhupenPal/REB-Solutions#readme"
 }
