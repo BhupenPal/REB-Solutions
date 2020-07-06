@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    <%-include('./Components/Flash.ejs') %>
+    <form method="POST">
+        <input type="email" name="Email">
+        <input type="password" name="Password">
+        <button type="submit">Log In</button>
+    </form>
     This is a login page
 </body>
 </html>

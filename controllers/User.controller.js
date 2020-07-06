@@ -1,4 +1,5 @@
 const Router = require('express').Router()
+const passport = require('passport')
 
 const { ensureAuthenticated, forwardAuthenticated } = require('./services/Helper')
 
@@ -9,9 +10,9 @@ Router.get('/login', forwardAuthenticated, (req, res, next) => {
 Router.post('/login', (req, res, next) => {
     passport.authenticate("local", {
         successRedirect: req.session.redirectTo || "/",
-        failureRedirect: "/users/login",
+        failureRedirect: "/user/login",
         failureFlash: true,
-    })(req, res, next);
+    })(req, res, next); 
 })
 
 Router.post('/dashboard', (req, res, next) => {
