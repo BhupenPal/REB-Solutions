@@ -4,7 +4,7 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use('/assets', express.static('assets'))
 
-require('./config/database')()
+require('./config/database')
 
 require('dotenv').config({
     path: './config/.env'
