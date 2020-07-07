@@ -18,6 +18,10 @@ body {
     box-shadow: 0px 10px 61px #00000017;
 }
 
+.Logo {
+    width: 95px;
+}
+
 .header-menu ul {
     list-style: none;
     align-items: center;
@@ -63,6 +67,14 @@ a {
 button {
     border: none;
     padding: 0;
+    outline: none;
+    transform: scaleY(0.95);
+    transition: 0.2s;
+    background-color: white;
+}
+
+button:active {
+    transform: translateY(2px) scale(0.97);
 }
 
 .hamburger {
@@ -86,7 +98,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 0;
+    padding: 25px 0;
 }
 
 .foot-section,
@@ -114,7 +126,7 @@ button {
     font-family: "Poppins";
     font-weight: 600;
     text-align: center;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 .social img {
@@ -212,24 +224,24 @@ button {
     }
 
     .sub-foot {
-        padding: 8vw 0;
+        padding: 5vw 0;
     }
 
     .foot-section {
         flex-direction: column;
-        width: 45%;
+        width: 50%;
     }
 
     .foot-menu {
         flex-direction: column;
         align-items: flex-end;
-        width: 55%;
+        width: 50%;
         padding-right: 6%;
         box-sizing: border-box;
     }
 
     .sub-foot a {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     .foot-menu a {
@@ -237,7 +249,6 @@ button {
     }
 
     #rights {
-        font-size: 4.5vw;
         width: 90%;
     }
 
@@ -246,7 +257,7 @@ button {
     }
 
     .social img {
-        width: 6.25vw;
+        width: 5.2vw;
     }
 }
 
@@ -356,7 +367,7 @@ button {
     }
 
     .sub-foot a {
-        font-size: 3.5vw;
+        font-size: 3vw;
     }
 
     .foot-menu a {
@@ -418,19 +429,21 @@ button {
 
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
     .Logo {
-        width: 8vw;
+        width: 80px;
     }
 
     .header-menu ul li {
         margin-left: 4vw;
+        font-size: 1.5vw;
     }
 
     .header-login ul li {
         margin-left: 3.5vw;
+        font-size: 1.5vw;
     }
 
     #bell {
-        width: 2.6vw;
+        width: 2.45vw;
     }
 
     .sub-foot {
@@ -446,19 +459,63 @@ button {
     }
 
     .sub-foot a {
-        font-size: 1.8vw;
+        font-size: 1.6vw;
+    }
+
+    .social img {
+        width: 2.3vw;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1440px) {
+    .Logo {
+        width: 87px;
+    }
+
+    .header-menu ul li {
+        margin-left: 4.2vw;
+    }
+
+    .header-login ul li {
+        margin-left: 3.5vw;
+    }
+
+    #bell {
+        width: 2.6vw;
+    }
+
+    .sub-foot a {
+        font-size: 1.52vw;
+    }
+
+    .social img {
+        width: 28px;
     }
 }
 
 @media only screen and (min-width: 1550px) and (max-width: 1920px) {
-    .header-menu ul li {
-        font-size: 1.15vw;
+    .Logo {
+        width: 5.8vw;
     }
+
+    .header-menu ul li {
+        font-size: 1.16vw;
+    }
+
     .header-login ul li {
-        font-size: 1.15vw;
+        font-size: 1.16vw;
     }
 
     #bell {
         width: 2.2vw;
+    }
+
+    .sub-foot a {
+        font-size: 1.42vw;
+    }
+
+    .social img {
+        width: 1.93vw;
+        margin: 0 0.65vw;
     }
 }

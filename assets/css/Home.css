@@ -307,6 +307,10 @@
         margin-top: 10vw;
     }
 
+    .single-illus img {
+        width: 54.3vw;
+    }
+
     .single-illus h2 {
         font-size: 8.3vw;
         margin: 5vw 0 10vw;
@@ -316,6 +320,11 @@
         flex-direction: column-reverse;
         width: 90%;
         padding: 12vw 0;
+    }
+
+    .home-about img {
+        height: 64.2vw;
+        margin-top: 4vw;
     }
 
     .about-details {
@@ -876,7 +885,7 @@
         font-size: 2.8vw;
     }
 
-    .client{
+    .client {
         width: 23vw;
     }
 }

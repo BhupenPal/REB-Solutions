@@ -41,6 +41,7 @@ app.use(function (req, res, next) {
 });
 
 app.use("/", require("./routes/Home.routes"));
+app.use("/", require("./routes/Login.routes"));
 
 app.use((req, res, next) => {
     const err = new Error("Error 404! Not Found!");
