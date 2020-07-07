@@ -44,18 +44,16 @@
                 <div class="city flex-ar-cen">
                     <img src="/assets/images/svgs/map-pin.svg" alt="">
                     <div class="search-info city-select">
-                        <select name="city-list" id="">
+                        <select name="city-list" id="city-trigger">
                             <option disabled selected>City</option>
-                            <option value="One">One</option>
-                            <option value="Two">Two</option>
-                            <option value="Three">Three</option>
+
                         </select>
                     </div>
                 </div>
                 <div class="country flex-ar-cen">
                     <img src="/assets/images/svgs/map.svg" alt="">
                     <div class="search-info country-select">
-                        <select name="country-list" id="">
+                        <select name="country-list" id="" onchange="setCities(this)">
                             <option disabled selected>Country</option>
                              <% if(user) { %>
                                 <% if(user.India === true) { %>
@@ -138,6 +136,7 @@
     </div>
     <%-include("./Components/Footer.ejs") %>
     <script src="/assets/scripts/index.js"></script>
+    <script src="/assets/scripts/countries.js"></script>
 </body>
 
 </html>
