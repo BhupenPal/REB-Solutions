@@ -15,8 +15,12 @@
         <div class="header-login">
             <ul>
                 <li><a href=""><img src="/assets/images/svgs/bell.svg" id="bell" alt="" /></a></li>
+                <% if(user){ %>
+                    <li><a href="/user/dashboard">Hi, <%= user.FirstName %></a></li>
+                <% } else { %>
                 <li><a href="">Join Us</a></li>
                 <li><a href="/user/login">Login</a></li>
+                <% } %>
             </ul>
         </div>
         <div class="hamburger">

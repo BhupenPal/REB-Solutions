@@ -9,13 +9,19 @@ Router.get('/login', forwardAuthenticated, (req, res, next) => {
 
 Router.post('/login', (req, res, next) => {
     passport.authenticate("local", {
-        successRedirect: req.session.redirectTo || "/",
+        successRedirect: req.session.redirectTo || "/user/dashboard",
         failureRedirect: "/user/login",
         failureFlash: true,
     })(req, res, next); 
 })
 
-Router.get('/dashboard', (req, res, next) => {
+Router.get('/logout', (req, res, next) => {
+    req.logout();
+    req.session.destroy();
+    res.redirect("/");
+})
+
+Router.get('/dashboard', ensureAuthenticated, (req, res, next) => {
     res.render('Dashboard')
 })
 
