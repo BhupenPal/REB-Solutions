@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/css/Login.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <%-include('./Components/Flash.ejs') %>
-    <form method="POST">
-        <input type="email" name="Email">
-        <input type="password" name="Password">
-        <button type="submit">Log In</button>
-    </form>
-    This is a login page
+    <%-include("./Components/Header.ejs") %>
+    
+    <div class="login-page">
+        <div class="login-container">
+            <form action="" method="POST" class="login-details">
+                <h1>Welcome to REB Solutions</h1>
+                <%-include('./Components/Flash.ejs') %>
+                <div class="line"></div>
+                <input type="email" id="user-email" placeholder="Email" name="Email" />
+                <input type="password" placeholder="Password" name="Password" />
+                <p>Forgot Password?</p>
+                <button type="submit" id="login-btn">Log In</button>
+            </form>
+            <div class="login-illus">
+                <img src="/assets/images/svgs/login-illus.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <%-include("./Components/Footer.ejs") %>
+    <script src="/assets/scripts/index.js"></script>
 </body>
+
 </html>

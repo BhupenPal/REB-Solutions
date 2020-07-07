@@ -15,7 +15,13 @@ Router.post('/login', (req, res, next) => {
     })(req, res, next); 
 })
 
-Router.get('/dashboard', (req, res, next) => {
+Router.get('/logout' , ensureAuthenticated, (req,res,next)=> {
+    req.logout()
+    req.session.destroy()
+    res.redirect('/')
+})
+
+Router.get('/dashboard',ensureAuthenticated ,  (req, res, next) => {
     res.render('Dashboard')
 })
 
