@@ -1,6 +1,6 @@
 const CountryCity = [
   {
-    Country: "INDIA",
+    Country: "India",
     City: [
       "146",
       "147",
@@ -23,7 +23,7 @@ const CountryCity = [
     ],
   },
   {
-    Country: "ASTON MARTIN",
+    Country: "USA",
     City: [
       "DV7",
       "DB9",
@@ -36,3 +36,22 @@ const CountryCity = [
     ],
   }
 ]
+
+const setCities = (SelectBox) => {
+    const cityBox = document.getElementById('city-trigger')
+    cityBox.innerHTML = ''
+    
+    const cities = CountryCity.reduce((result, obj) => {
+        if(obj.Country === SelectBox.value) {
+            result = obj.City
+        }
+        return result
+    }, null)
+    
+    for(let count = 0; count < cities.length; count++) {
+        let opt = document.createElement('option');
+        opt.value = cities[count];
+        opt.innerHTML = cities[count];
+        cityBox.appendChild(opt);
+    }
+}

@@ -37,25 +37,27 @@
                         </select>
                     </div>
                 </div>
-                <div class="city flex-ar-cen">
-                    <img src="/assets/images/svgs/map-pin.svg" alt="">
-                    <div class="search-info city-select">
-                        <select name="city-list" id="">
-                            <option disabled selected>City</option>
-                            <option value="One">One</option>
-                            <option value="Two">Two</option>
-                            <option value="Three">Three</option>
-                        </select>
-                    </div>
-                </div>
                 <div class="country flex-ar-cen">
                     <img src="/assets/images/svgs/map.svg" alt="">
                     <div class="search-info country-select">
-                        <select name="country-list" id="">
+                        <select name="country-list" id="" onchange="setCities(this)">
                             <option disabled selected>Country</option>
-                            <option value="One">One</option>
-                            <option value="Two">Two</option>
-                            <option value="Three">Three</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="Gulf">Gulf</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Malayasia">Malayasia</option>
+                            <option value="Indonasia">Indonasia</option>
+                            <option value="Africa">Africa</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="city flex-ar-cen">
+                    <img src="/assets/images/svgs/map-pin.svg" alt="">
+                    <div class="search-info city-select">
+                        <select name="city-list" id="city-trigger">
+                            <option disabled selected>Select Country</option>
                         </select>
                     </div>
                 </div>
@@ -109,6 +111,7 @@
     </div>
     <%-include("./Components/Footer.ejs") %>
     <script src="/assets/scripts/index.js"></script>
+    <script src="/assets/scripts/CountryCity.js"></script>
 </body>
 
 </html>
