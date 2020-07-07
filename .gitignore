@@ -1,6 +1,7 @@
 # Dependency directories
 node_modules/
 .DS_Store
+.adminbro/
 
 # dotenv environment variables file
 .env
