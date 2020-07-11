@@ -38,20 +38,20 @@ const CountryCity = [
 ]
 
 const setCities = (SelectBox) => {
-    const cityBox = document.getElementById('city-trigger')
-    cityBox.innerHTML = ''
-    
-    const cities = CountryCity.reduce((result, obj) => {
-        if(obj.Country === SelectBox.value) {
-            result = obj.City
-        }
-        return result
-    }, null)
-    
-    for(let count = 0; count < cities.length; count++) {
-        let opt = document.createElement('option');
-        opt.value = cities[count];
-        opt.innerHTML = cities[count];
-        cityBox.appendChild(opt);
+  const cityBox = document.getElementById('city-trigger')
+  cityBox.innerHTML = '<option disabled selected>City</option>'
+
+  const cities = CountryCity.reduce((result, obj) => {
+    if (obj.Country === SelectBox.value) {
+      result = obj.City
     }
+    return result
+  }, null)
+
+  for (let count = 0; count < cities.length; count++) {
+    let opt = document.createElement('option');
+    opt.value = cities[count];
+    opt.innerHTML = cities[count];
+    cityBox.appendChild(opt);
+  }
 }

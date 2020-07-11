@@ -78,7 +78,7 @@
     width: 24%;
 }
 
-.flex-ar-cen {
+.flex-cen {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,17 +109,21 @@
     background-position-x: 98%;
     background-position-y: 10px;
     padding: 0 5px;
+    text-overflow: ellipsis;
+    padding-right: 24px;
 }
 
 .search-info select option {
     font-size: 20px;
 }
 
-.city-select {
+.city-info,
+.city-info select {
     width: 140px;
 }
 
-.country-select {
+.country-info,
+.country-info select {
     width: 170px;
 }
 
@@ -273,6 +277,7 @@
     .search-info select {
         font-size: 5.5vw;
         background-size: 4.6vw;
+        padding-right: 5.8vw;
     }
 
     .search-info select option {
@@ -280,12 +285,12 @@
     }
 
     .search-info select,
-    .city-select,
-    .country-select {
+    .city-info,
+    .country-info {
         width: 49vw;
     }
 
-    .flex-ar-cen img {
+    .flex-cen img {
         width: 8.3vw;
     }
 
@@ -446,6 +451,7 @@
     .search-info select {
         font-size: 4.5vw;
         background-size: 4vw;
+        padding-right: 4.7vw;
     }
 
     .search-info select option {
@@ -453,12 +459,12 @@
     }
 
     .search-info select,
-    .city-select,
-    .country-select {
+    .city-info,
+    .country-info {
         width: 40vw;
     }
 
-    .flex-ar-cen img {
+    .flex-cen img {
         width: 5.5vw;
     }
 
@@ -570,7 +576,7 @@
         margin-bottom: 10vw;
     }
 
-    .flex-ar-cen img {
+    .flex-cen img {
         width: 3vw;
     }
 
@@ -582,13 +588,16 @@
         width: 18.5vw;
         font-size: 2.3vw;
         background-size: 1.9vw;
+        padding-right: 2.2vw;
     }
 
-    .city-select {
+    .city-info,
+    .city-info select {
         width: 11vw;
     }
 
-    .country-select {
+    .country-info,
+    .country-info select {
         width: 14vw;
     }
 
@@ -694,7 +703,7 @@
         margin-bottom: 9vw;
     }
 
-    .flex-ar-cen img {
+    .flex-cen img {
         width: 2.7vw;
     }
 
@@ -706,13 +715,16 @@
         width: 18vw;
         font-size: 2.1vw;
         background-size: 1.9vw;
+        padding-right: 2.1vw;
     }
 
-    .city-select {
+    .city-info,
+    .city-info select {
         width: 10.5vw;
     }
 
-    .country-select {
+    .country-info,
+    .country-info select {
         width: 13.5vw;
     }
 
@@ -806,7 +818,7 @@
         height: 3.34vw;
     }
 
-    .flex-ar-cen img {
+    .flex-cen img {
         width: 2.6vw;
     }
 
@@ -814,13 +826,14 @@
         width: 14.7vw;
         font-size: 1.73vw;
         background-size: 1.5vw;
+        padding-right: 1.8vw;
     }
 
-    .city-select {
+    .city-info, .city-info select {
         width: 9.35vw;
     }
 
-    .country-select {
+    .country-info, .country-info select {
         width: 11.36vw;
     }
 

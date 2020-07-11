@@ -26,7 +26,7 @@
         <br /><br /><br /><br />
         <div class="home-display">
             <div class="search-bar">
-                <div class="industry flex-ar-cen">
+                <div class="industry flex-cen">
                     <img src="/assets/images/svgs/search.svg" alt="">
                     <div class="search-info">
                         <select name="industry-list" id="">
@@ -37,9 +37,17 @@
                         </select>
                     </div>
                 </div>
-                <div class="country flex-ar-cen">
+                <div class="city flex-cen">
+                    <img src="/assets/images/svgs/map-pin.svg" alt="">
+                    <div class="search-info city-info">
+                        <select name="city-list" id="city-trigger">
+                            <option disabled selected>City</option>
+                        </select>
+                    </div>
+                </div>  
+                <div class="country flex-cen">
                     <img src="/assets/images/svgs/map.svg" alt="">
-                    <div class="search-info country-select">
+                    <div class="search-info country-info">
                         <select name="country-list" id="" onchange="setCities(this)">
                             <option disabled selected>Country</option>
                             <option value="India">India</option>
@@ -53,15 +61,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="city flex-ar-cen">
-                    <img src="/assets/images/svgs/map-pin.svg" alt="">
-                    <div class="search-info city-select">
-                        <select name="city-list" id="city-trigger">
-                            <option disabled selected>Select Country</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="search-container flex-ar-cen">
+                <div class="search-container flex-cen">
                     <button class="search-button">Search</button>
                 </div>
             </div>
