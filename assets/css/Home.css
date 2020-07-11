@@ -3,14 +3,14 @@
 }
 
 .home-banner {
-    width: 85%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 20px auto 0;
     display: flex;
     justify-content: space-between;
 }
 
 .banner-head {
-    width: 30%;
+    width: 32%;
     display: flex;
     flex-direction: column;
     margin-top: 80px;
@@ -34,7 +34,7 @@
 }
 
 .banner-img {
-    width: 70%;
+    width: 68%;
 }
 
 .banner-img img {
@@ -339,7 +339,7 @@
 
     .about-details h3 {
         font-size: 9.5vw;
-        margin-bottom: 6vw;
+        margin-bottom: 3vw;
     }
 
     .about-details p {
@@ -379,6 +379,7 @@
     .home-banner {
         flex-direction: column-reverse;
         width: 95%;
+        padding-top: 8vh;
     }
 
     .banner-img {
@@ -399,7 +400,7 @@
     .banner-head h1 {
         text-align: center;
         width: 70vw;
-        font-size: 6vw;
+        font-size: 5.2vw;
     }
 
     .banner-head .search-button {
@@ -430,7 +431,7 @@
     .country,
     .search-container {
         width: 100%;
-        padding: 6vw 0;
+        padding: 5.5vw 0;
     }
 
     .country {
@@ -449,8 +450,9 @@
     }
 
     .search-info select {
-        font-size: 4.5vw;
-        background-size: 4vw;
+        font-size: 4vw;
+        background-size: 3.5vw;
+        background-position-y: 12px;
         padding-right: 4.7vw;
     }
 
@@ -465,12 +467,12 @@
     }
 
     .flex-cen img {
-        width: 5.5vw;
+        width: 5vw;
     }
 
     .search-container .search-button {
-        width: 37vw;
-        height: 9vw;
+        width: 34vw;
+        height: 8vw;
     }
 
     .home-illus {
@@ -508,7 +510,7 @@
 
     .about-details h3 {
         font-size: 7vw;
-        margin-bottom: 6vw;
+        margin-bottom: 2vw;
     }
 
     .about-details p {
@@ -534,7 +536,6 @@
     }
 
     .client-container {
-        /* flex-direction: column; */
         flex-wrap: wrap;
         padding: 0;
     }
@@ -548,7 +549,7 @@
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
     .banner-head {
-        width: 35%;
+        width: 38%;
         margin-top: 5vw;
     }
 
@@ -557,7 +558,7 @@
     }
 
     .banner-img {
-        width: 65%;
+        width: 62%;
     }
 
     .search-button {
@@ -675,7 +676,7 @@
     }
 
     .banner-head {
-        width: 35%;
+        width: 38%;
         margin-top: 3vw;
     }
 
@@ -684,7 +685,7 @@
     }
 
     .banner-img {
-        width: 65%;
+        width: 62%;
     }
 
     .search-button {
@@ -800,7 +801,7 @@
     }
 
     .banner-head {
-        width: 35%;
+        width: 38%;
         margin-top: 3vw;
     }
 
@@ -809,7 +810,7 @@
     }
 
     .banner-img {
-        width: 65%;
+        width: 62%;
     }
 
     .search-button {
@@ -829,11 +830,13 @@
         padding-right: 1.8vw;
     }
 
-    .city-info, .city-info select {
+    .city-info,
+    .city-info select {
         width: 9.35vw;
     }
 
-    .country-info, .country-info select {
+    .country-info,
+    .country-info select {
         width: 11.36vw;
     }
 
@@ -847,16 +850,20 @@
     }
 
     .home-about {
-        width: 90%;
         padding: 5.5vw 0;
     }
 
     .home-about img {
-        width: 45vw;
+        width: 42vw;
     }
 
     .about-details {
         width: 46%;
+    }
+
+    .about-details p {
+        font-size: 1.3vw;
+        line-height: 2.1vw;
     }
 
     .client {
@@ -868,14 +875,52 @@
 @media only screen and (min-width: 1550px) and (max-width: 1920px) {
     .home-banner {
         padding: 1.5vw 0 1vw;
+        width: 80%;
     }
 
     .banner-head {
         margin-top: 6vw;
+        width: 33%;
     }
 
     .banner-head h1 {
-        font-size: 2.6vw;
+        font-size: 2.5vw;
+    }
+
+    .search-button {
+        width: 12.8vw;
+        height: 3.125vw;
+        font-size: 1.25vw;
+    }
+
+    .search-info select {
+        width: 14.7vw;
+        font-size: 1.625vw;
+        background-size: 1.3vw;
+        padding-right: 1.5vw;
+    }
+
+    .search-info select option {
+        font-size: 1.25vw;
+    }
+
+    .city-info,
+    .city-info select {
+        width: 9.3vw;
+    }
+
+    .country-info,
+    .country-info select {
+        width: 12vw;
+    }
+
+    .search-container .search-button {
+        width: 14.375vw;
+        height: 3.875vw;
+    }
+
+    .flex-cen img {
+        width: 2.5vw;
     }
 
     .single-illus img {
@@ -887,7 +932,7 @@
     }
 
     .about-details h3 {
-        font-size: 2.4vw;
+        font-size: 2.5vw;
     }
 
     .about-details p {
