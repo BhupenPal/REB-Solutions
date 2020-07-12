@@ -29,11 +29,11 @@
         </div>
         <br /><br /><br /><br />
         <div class="home-display">
-            <div class="search-bar">
+            <form action="/user/search" method="POST" class="search-bar">
                 <div class="industry flex-ar-cen">
                     <img src="/assets/images/svgs/search.svg" alt="">
                     <div class="search-info">
-                        <select name="industry-list" id="">
+                        <select name="industrylist" id="">
                             <option disabled selected>Industry Type</option>
                             <option value="One">One</option>
                             <option value="Two">Two</option>
@@ -44,7 +44,7 @@
                 <div class="city flex-ar-cen">
                     <img src="/assets/images/svgs/map-pin.svg" alt="">
                     <div class="search-info city-select">
-                        <select name="city-list" id="city-trigger">
+                        <select name="citylist" id="city-trigger">
                             <option disabled selected>City</option>
 
                         </select>
@@ -53,7 +53,7 @@
                 <div class="country flex-ar-cen">
                     <img src="/assets/images/svgs/map.svg" alt="">
                     <div class="search-info country-select">
-                        <select name="country-list" id="" onchange="setCities(this)">
+                        <select name="countrylist" id="" onchange="setCities(this)">
                             <option disabled selected>Country</option>
                              <% if(user) { %>
                                 <% if(user.India === true) { %>
@@ -87,9 +87,9 @@
                     </div>
                 </div>
                 <div class="search-container flex-ar-cen">
-                    <button class="search-button">Search</button>
+                    <button class="search-button" type="submit">Search</button>    
                 </div>
-            </div>
+            </form>
             <div class="home-illus">
                 <div class="single-illus">
                     <img src="/assets/images/svgs/executives.svg" alt="">

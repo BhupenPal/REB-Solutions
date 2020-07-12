@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies</title>
+</head>
+<body>
+    <% if(data.length > 0) { %>
+        <table>
+            <tr>
+                <th>Agent</th>
+                <th>Company Name</th>
+                <th>Location</th>
+                <th>Mobile No</th>
+                <th>Corporate Email Address</th>
+            </tr>
+          <% data.forEach(function(companyData){ %>
+            <tr>
+                <td><%= companyData.Agent %></td>
+                <td><%= companyData.CompanyName %></td>
+                <td><%= companyData.Location %></td>
+                <td><%= companyData.MobileNum %></td>
+                <td><%= companyData.CorporateEmail %></td>
+            </tr>
+          <% }) %>
+    </table>
+   <%  } else { %>
+    <div style="background-color: rgba(red,red,red, 0.5);">
+        <h1>No results found</h1>
+    </div>
+    
+  <% } %>
+  
+</body>
+</html>
