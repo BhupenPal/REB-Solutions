@@ -66,12 +66,12 @@
 
 .city {
     width: 22%;
-    border-left: 0.2px solid rgba(0, 0, 0, 0.3);
-    border-right: 0.2px solid rgba(0, 0, 0, 0.3);
 }
 
 .country {
     width: 25%;
+    border-left: 0.2px solid rgba(0, 0, 0, 0.3);
+    border-right: 0.2px solid rgba(0, 0, 0, 0.3);
 }
 
 .search-container {
@@ -264,13 +264,13 @@
     }
 
     .country {
+        border-left: none;
+        border-right: none;
+        border-top: 0.3px solid rgba(0, 0, 0, 0.3);
         border-bottom: 0.3px solid rgba(0, 0, 0, 0.3);
     }
 
     .city {
-        border-left: none;
-        border-right: none;
-        border-top: 0.3px solid rgba(0, 0, 0, 0.3);
         border-bottom: 0.3px solid rgba(0, 0, 0, 0.3);
     }
 
@@ -435,13 +435,13 @@
     }
 
     .country {
+        border-left: none;
+        border-right: none;
+        border-top: 0.3px solid rgba(0, 0, 0, 0.3);
         border-bottom: 0.3px solid rgba(0, 0, 0, 0.3);
     }
 
     .city {
-        border-left: none;
-        border-right: none;
-        border-top: 0.3px solid rgba(0, 0, 0, 0.3);
         border-bottom: 0.3px solid rgba(0, 0, 0, 0.3);
     }
 

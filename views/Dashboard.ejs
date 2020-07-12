@@ -4,15 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DASHBOARD</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/Dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <%-include('./Components/Header.ejs') %>
-    <div style="width: 500px; height: 500px; padding: 100px;">
-        <h1>Welcome <%= user.FirstName %> </h1>
+    <!-- <div style="width: 500px; height: 500px; padding: 100px;">
+        <h1>Welcome <%=  %> </h1>
         <a href="/user/Logout">Logout</a>
+    </div> -->
+    <div class="dash-page">
+        <div class="dash-container">
+            <div class="profile-head">
+                <img src="" alt="">
+                <div class="prof-head-details">
+                    <h1>My Profile</h1>
+                    <h4>Countries Unlocked</h4>
+                    <div class="countries-unlocked">
+                        <div class="country-name">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <%-include('./Components/Footer.ejs') %>
 </body>
