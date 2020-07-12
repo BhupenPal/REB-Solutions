@@ -122,8 +122,13 @@
     width: 140px;
 }
 
-.country-info,
-.country-info select {
+.city-select select {
+    padding-right: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.country-select {
     width: 170px;
 }
 
@@ -288,6 +293,11 @@
     .city-info,
     .country-info {
         width: 49vw;
+    }
+    .city-select select {
+        padding-right: 20px;
+        width: 100%;
+        overflow: hidden;
     }
 
     .flex-cen img {
@@ -465,6 +475,11 @@
     .country-info {
         width: 40vw;
     }
+    .city-select select {
+        padding-right: 20px;
+        width: 100%;
+        overflow: hidden;
+    }
 
     .flex-cen img {
         width: 5vw;
@@ -597,8 +612,13 @@
         width: 11vw;
     }
 
-    .country-info,
-    .country-info select {
+    .city-select select {
+        padding-right: 20px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .country-select {
         width: 14vw;
     }
 
@@ -723,6 +743,11 @@
     .city-info select {
         width: 10.5vw;
     }
+    .city-select select {
+        padding-right: 20px;
+        width: 100%;
+        overflow: hidden;
+    }
 
     .country-info,
     .country-info select {
@@ -833,6 +858,11 @@
     .city-info,
     .city-info select {
         width: 9.35vw;
+    }
+    .city-select select {
+        padding-right: 20px;
+        width: 100%;
+        overflow: hidden;
     }
 
     .country-info,

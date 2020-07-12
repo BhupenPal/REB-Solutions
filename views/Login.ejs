@@ -13,15 +13,16 @@
 
 <body>
     <%-include("./Components/Header.ejs") %>
-    <%-include('./Components/Flash.ejs') %>
+    
     <div class="login-page">
         <div class="login-container">
             <form action="" method="POST" class="login-details">
                 <h1>Welcome to REB Solutions</h1>
+                <%-include('./Components/Flash.ejs') %>
                 <div class="line"></div>
                 <input type="email" id="user-email" placeholder="Email" name="Email" />
                 <input type="password" placeholder="Password" name="Password" />
-                <a href="">Forgot Password?</a>
+                <p>Forgot Password?</p>
                 <button type="submit" id="login-btn">Log In</button>
             </form>
             <div class="login-illus">

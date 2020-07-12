@@ -39,7 +39,7 @@ const UserSchema = mongoose.Schema({
     Malaysia: {
         type: Boolean
     },
-    Indonasia: {
+    Indonesia: {
         type: Boolean
     },
     Africa: {

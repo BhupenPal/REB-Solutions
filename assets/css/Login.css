@@ -1,16 +1,17 @@
-.login-page {
-    padding-top: 100px;
-    height: 100vh;
-    box-sizing: border-box;
+body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.login-page {
+    padding-top: 120px;
+    flex-grow: 1;
 }
 
 .login-container {
     display: flex;
     width: 80%;
-    margin: 80px auto 5vh;
+    margin: 20px auto 0;
     justify-content: space-between;
 }
 
@@ -20,7 +21,7 @@
     align-items: center;
     width: 50%;
     font-family: Poppins;
-    margin-top: 40px;
+    margin-top: 35px;
 }
 
 .login-details h1 {
@@ -50,7 +51,7 @@ input {
     margin-bottom: 30px;
 }
 
-.login-details a {
+.login-details p {
     width: 400px;
     text-align: right;
     margin: 10px 0 0;
@@ -83,7 +84,6 @@ input {
 @media only screen and (max-width:576px) {
     .login-page {
         padding-top: 85px;
-        height: auto;
     }
 
     .login-container {
@@ -122,7 +122,7 @@ input {
         margin-bottom: 5.2vw;
     }
 
-    .login-details a {
+    .login-details p {
         width: 69.4vw;
         font-size: 2.78vw;
     }
@@ -138,7 +138,6 @@ input {
 @media only screen and (min-width: 577px) and (max-width: 768px) {
     .login-page {
         padding-top: 85px;
-        height: auto;
     }
 
     .login-container {
@@ -146,7 +145,7 @@ input {
         margin: 0 auto;
         flex-direction: column-reverse;
         align-items: center;
-        margin: 12vh auto 18vh;
+        margin: 18vh auto;
     }
 
     .login-details {
@@ -178,7 +177,7 @@ input {
         margin-bottom: 4vw;
     }
 
-    .login-details a {
+    .login-details p {
         width: 52vw;
         font-size: 2vw;
     }
@@ -193,8 +192,7 @@ input {
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
     .login-page {
-        padding-top: 90px;
-        height: auto;
+        padding-top: 85px;
     }
 
     .login-container {
@@ -202,7 +200,7 @@ input {
         margin: 0 auto;
         flex-direction: column-reverse;
         align-items: center;
-        margin: 17vh auto 20vh;
+        margin: 15vh auto 18vh;
     }
 
     .login-details {
@@ -234,7 +232,7 @@ input {
         margin-bottom: 4vw;
     }
 
-    .login-details a {
+    .login-details p {
         font-size: 1.6vw;
         width: 40.3vw;
     }
@@ -255,6 +253,7 @@ input {
     .login-container {
         width: 90%;
         align-items: center;
+        margin: 12vh auto;
     }
 
     .login-details {
@@ -276,7 +275,7 @@ input {
         font-size: 1.67vw;
     }
 
-    .login-details a {
+    .login-details p {
         font-size: 1.35vw;
         width: 33.35vw;
     }
@@ -293,14 +292,15 @@ input {
     }
 }
 
-@media only screen and (min-width: 1201px) and (max-width: 1500px) {
+@media only screen and (min-width: 1201px) and (max-width: 1440px) {
     .login-page {
-        padding-top: 100px;
+        padding-top: 90px;
     }
 
     .login-container {
         width: 90%;
         align-items: center;
+        margin: 10vh auto;
     }
 
     .login-details {
@@ -322,13 +322,13 @@ input {
 
 @media only screen and (min-width: 1550px) and (max-width: 1920px) {
     .login-page {
-        padding-top: 6.25vw;
+        padding-top: 90px;
     }
 
     .login-container {
         width: 90%;
         align-items: center;
-        margin: 5vh auto;
+        margin: 5vh auto 3vh;
     }
 
     .login-details {
@@ -350,7 +350,7 @@ input {
         font-size: 1.29vw;
     }
 
-    .login-details a {
+    .login-details p {
         width: 25.8vw;
         font-size: 1.05vw;
     }

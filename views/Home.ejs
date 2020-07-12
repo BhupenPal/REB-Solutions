@@ -14,6 +14,10 @@
 <body>
     <%-include("./Components/Header.ejs") %>
     <div class="home-page">
+        <% if(user) { %>
+            <h1 style="margin-left: 10%;">Welcome <%= user.FirstName %> </h1>
+       <% } %>
+       
         <div class="home-banner">
             <div class="banner-head">
                 <h1>One Discovery tool for your research<br />needs</h1>
@@ -25,46 +29,65 @@
         </div>
         <br /><br /><br /><br />
         <div class="home-display">
-            <div class="search-bar">
-                <div class="industry flex-cen">
+            <form action="/user/search" method="POST" class="search-bar">
+                <div class="industry flex-ar-cen">
                     <img src="/assets/images/svgs/search.svg" alt="">
                     <div class="search-info">
-                        <select name="industry-list" id="">
+                        <select name="industrylist" id="">
                             <option disabled selected>Industry Type</option>
                             <option value="One">One</option>
                             <option value="Two">Two</option>
                             <option value="Three">Three</option>
-                        </select>
+                       </select>
                     </div>
                 </div>
                 <div class="city flex-cen">
                     <img src="/assets/images/svgs/map-pin.svg" alt="">
-                    <div class="search-info city-info">
-                        <select name="city-list" id="city-trigger">
+                    <div class="search-info city-select">
+                        <select name="citylist" id="city-trigger">
                             <option disabled selected>City</option>
+
                         </select>
                     </div>
                 </div>  
                 <div class="country flex-cen">
                     <img src="/assets/images/svgs/map.svg" alt="">
-                    <div class="search-info country-info">
-                        <select name="country-list" id="" onchange="setCities(this)">
+                    <div class="search-info country-select">
+                        <select name="countrylist" id="" onchange="setCities(this)">
                             <option disabled selected>Country</option>
-                            <option value="India">India</option>
-                            <option value="USA">USA</option>
-                            <option value="UK">United Kingdom</option>
-                            <option value="Gulf">Gulf</option>
-                            <option value="Singapore">Singapore</option>
-                            <option value="Malayasia">Malayasia</option>
-                            <option value="Indonasia">Indonasia</option>
-                            <option value="Africa">Africa</option>
+                             <% if(user) { %>
+                                <% if(user.India === true) { %>
+                                    <option value="India">India</option>
+                                    <% } %>
+                                    <% if(user.USA === true) { %>
+                                    <option value="USA">USA</option>
+                                    <% } %>
+                                     <% if(user.UK === true) { %>
+                                    <option value="UK">UK</option>
+                                     <% } %>
+                                    <% if(user.Gulf === true) { %>
+                                    <option value="Gulf">Gulf</option>
+                                    <% } %>
+                                    <% if(user.Singapore === true) { %>
+                                        <option value="Singapore">Singapore</option>
+                                    <% } %>
+                                    <% if(user.Malaysia === true) { %>
+                                        <option value="Malaysia">Malaysia</option>
+                                    <% } %>
+                                    <% if(user.Indonesia === true) { %>
+                                        <option value="Indonesia">Indonesia</option>
+                                    <% } %>
+                                    <% if(user.Africa === true) { %>
+                                        <option value="Africa">Africa</option>
+                                    <% } %>
+                                <% } %>
                         </select>
                     </div>
                 </div>
-                <div class="search-container flex-cen">
-                    <button class="search-button">Search</button>
+                <div class="search-container flex-ar-cen">
+                    <button class="search-button" type="submit">Search</button>    
                 </div>
-            </div>
+            </form>
             <div class="home-illus">
                 <div class="single-illus">
                     <img src="/assets/images/svgs/executives.svg" alt="">
@@ -111,7 +134,7 @@
     </div>
     <%-include("./Components/Footer.ejs") %>
     <script src="/assets/scripts/index.js"></script>
-    <script src="/assets/scripts/CountryCity.js"></script>
+    <script src="/assets/scripts/countries.js"></script>
 </body>
 
 </html>
