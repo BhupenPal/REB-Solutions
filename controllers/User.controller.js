@@ -28,9 +28,14 @@ Router.post('/search' , ensureAuthenticated , async (req,res)=> {
     const country = req.body.countrylist
     const city= req.body.citylist
     console.log(city)
-   const data = await companies.find({Location : city})
-    // console.log(data)
-    res.render('result' , {data : data})
+    const hasCountry =await  User.findOne({ [country] : true })
+    if(hasCountry){
+        const data = await companies.find({Location : city})
+        // console.log(data)
+        return res.render('result' , {data : data})
+    }
+    res.send(`Subscribe to get the data of ${country}`)
+   
 })
 
 
