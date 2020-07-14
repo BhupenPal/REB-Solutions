@@ -1,8 +1,7 @@
 const Router = require('express').Router()
 const passport = require('passport')
 const companies = require('../models/Company.model')
-const User =require('../models/User.model')
-// console.log(companies.collection)
+const User = require('../models/User.model')
 
 const { ensureAuthenticated, forwardAuthenticated } = require('./services/Helper')
 
@@ -15,31 +14,27 @@ Router.post('/login', (req, res, next) => {
         successRedirect: req.session.redirectTo || "/",
         failureRedirect: "/user/login",
         failureFlash: true,
-    })(req, res, next); 
+    })(req, res, next);
 })
 
-Router.get('/logout' , ensureAuthenticated, (req,res,next)=> {
+Router.get('/logout', ensureAuthenticated, (req, res, next) => {
     req.logout()
     req.session.destroy()
     res.redirect('/')
 })
 
-Router.post('/search' , ensureAuthenticated , async (req,res)=> {
+Router.post('/search', ensureAuthenticated, async (req, res) => {
     const country = req.body.countrylist
-    const city= req.body.citylist
-    console.log(city)
-    const hasCountry =await  User.findOne({ [country] : true })
-    if(hasCountry){
-        const data = await companies.find({Location : city})
-        // console.log(data)
-        return res.render('result' , {data : data})
+    const city = req.body.citylist
+    const hasCountry = await User.findOne({ [country]: true })
+    if (hasCountry) {
+        const data = await companies.find({ Location: city })
+        return res.render('result', { data })
     }
     res.send(`Subscribe to get the data of ${country}`)
-   
 })
 
-
-Router.get('/dashboard',ensureAuthenticated ,  (req, res, next) => {
+Router.get('/dashboard', ensureAuthenticated, (req, res, next) => {
     res.render('Dashboard')
 })
 
