@@ -13,20 +13,61 @@
 
 <body>
     <%-include('./Components/Header.ejs') %>
-    <!-- <div style="width: 500px; height: 500px; padding: 100px;">
-        <h1>Welcome <%=  %> </h1>
-        <a href="/user/Logout">Logout</a>
-    </div> -->
     <div class="dash-page">
         <div class="dash-container">
             <div class="profile-head">
-                <img src="" alt="">
+                <img src="/assets/images/svgs/person.svg" alt="">
                 <div class="prof-head-details">
                     <h1>My Profile</h1>
                     <h4>Countries Unlocked</h4>
                     <div class="countries-unlocked">
-                        <div class="country-name">
-
+                        <div class="country-name">USA</div>
+                        <div class="country-name">United Kingdom</div>
+                        <div class="country-name">India</div>
+                        <div class="country-name">France</div>
+                        <div class="country-name">Malaysia</div>
+                    </div>
+                </div>
+            </div>
+            <div class="personal-info">
+                <h1>Personal Details</h1>
+                <div class="details-container">
+                    <div class="info-container">
+                        <h4>First Name</h4>
+                        <h3>Mark</h3>
+                    </div>
+                    <div class="info-container">
+                        <h4>Last Name</h4>
+                        <h3>Hughes</h3>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <div class="info-container">
+                        <h4>Email ID</h4>
+                        <h3>mark.hughes@gmail.com</h3>
+                    </div>
+                    <div class="info-container">
+                        <h4>Phone Number</h4>
+                        <h3><span>+91</span>92XX529203</h3>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <div class="birth-container">
+                        <h4>Date of Birth</h4>
+                        <div class="birth-flex">
+                            <div class="birth-info">
+                                <img src="/assets/images/svgs/calendar.svg" alt="">
+                                <span>24</span>
+                                <img src="/assets/images/svgs/chevron-down.svg" alt="">
+                            </div>
+                            <div class="birth-info">
+                                <span>June</span>
+                                <img src="/assets/images/svgs/chevron-down.svg" alt="">
+                            </div>
+                            <div class="birth-info">
+                                <span>1999</span>
+                                <img src="/assets/images/svgs/chevron-down.svg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -34,6 +75,7 @@
         </div>
     </div>
     <%-include('./Components/Footer.ejs') %>
+    <script src="/assets/scripts/index.js"></script>
 </body>
 
 </html>

@@ -25,64 +25,7 @@
         </div>
         <br /><br /><br /><br />
         <div class="home-display">
-            <form class="search-bar" action="/user/search" method="POST">
-                <div class="industry flex-cen">
-                    <img src="/assets/images/svgs/search.svg" alt="">
-                    <div class="search-info">
-                        <select name="industry-list" id="">
-                            <option disabled selected>Industry Type</option>
-                            <option value="One">One</option>
-                            <option value="Two">Two</option>
-                            <option value="Three">Three</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="country flex-cen">
-                    <img src="/assets/images/svgs/map.svg" alt="">
-                    <div class="search-info country-info">
-                        <select name="countrylist" id="" onchange="setCities(this)">
-                            <option value="Country" disabled selected>Country</option>
-                            <% if(user) { %>
-                                <% if(user.India === true) { %>
-                                    <option value="India">India</option>
-                                    <% } %>
-                                    <% if(user.USA === true) { %>
-                                    <option value="USA">USA</option>
-                                    <% } %>
-                                     <% if(user.UK === true) { %>
-                                    <option value="UK">UK</option>
-                                     <% } %>
-                                    <% if(user.Gulf === true) { %>
-                                    <option value="Gulf">Gulf</option>
-                                    <% } %>
-                                    <% if(user.Singapore === true) { %>
-                                        <option value="Singapore">Singapore</option>
-                                    <% } %>
-                                    <% if(user.Malaysia === true) { %>
-                                        <option value="Malaysia">Malaysia</option>
-                                    <% } %>
-                                    <% if(user.Indonesia === true) { %>
-                                        <option value="Indonesia">Indonesia</option>
-                                    <% } %>
-                                    <% if(user.Africa === true) { %>
-                                        <option value="Africa">Africa</option>
-                                    <% } %>
-                                <% } %>
-                        </select>
-                    </div>
-                </div>
-                <div class="city flex-cen">
-                    <img src="/assets/images/svgs/map-pin.svg" alt="">
-                    <div class="search-info city-info">
-                        <select name="citylist" id="city-trigger">
-                            <option disabled selected>City</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="search-container flex-cen">
-                    <button class="search-button" type="submit">Search</button>
-                </div>
-            </form>
+            <%-include('./Components/SearchBar.ejs') %>
             <div class="home-illus">
                 <div class="single-illus">
                     <img src="/assets/images/svgs/executives.svg" alt="">

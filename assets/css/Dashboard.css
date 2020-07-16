@@ -1,5 +1,392 @@
 .dash-page {
-    height: 100vh;
     box-sizing: border-box;
     padding-top: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash-container {
+    width: 80%;
+    margin: 7vh auto 15vh;
+    font-family: Poppins;
+}
+
+.profile-head {
+    display: flex;
+    border-bottom: 1px solid #BDBDBD;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.profile-head img {
+    width: 120px;
+    height: 120px;
+    margin: 0 50px;
+    /* Border: Just to check, delete after original image is set */
+    border: 1px solid #BDBDBD;
+    border-radius: 50%;
+}
+
+.prof-head-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.prof-head-details h1 {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0;
+}
+
+.prof-head-details h4 {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 13px 0 10px;
+}
+
+.countries-unlocked {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.country-name {
+    margin-right: 14px;
+    margin-bottom: 14px;
+    background: #335CC3;
+    border: 1px solid #335CC3;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+    color: white;
+    padding: 5px 20px;
+}
+
+.personal-info {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.personal-info h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.details-container {
+    display: flex;
+    margin-top: 45px;
+}
+
+.info-container {
+    width: 40%;
+    border-bottom: 1px solid black;
+    margin-right: 120px;
+}
+
+.info-container h4,
+.birth-container h4 {
+    font-size: 18px;
+    color: #828282;
+    font-weight: 500;
+    margin: 0 0 3px;
+}
+
+.info-container h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 3px;
+}
+
+.info-container h3 span {
+    margin-right: 10px;
+}
+
+.birth-flex {
+    display: flex;
+    margin-top: 20px;
+}
+
+.birth-info {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.birth-info span,
+.birth-info img {
+    margin: 0 5px;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .dash-page {
+        padding-top: 85px;
+    }
+
+    .dash-container {
+        margin: 8.4vw auto 15vw;
+    }
+
+    .profile-head {
+        flex-direction: column;
+    }
+
+    .profile-head img {
+        margin-bottom: 6vw;
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .prof-head-details {
+        align-items: center;
+    }
+
+    .prof-head-details h1 {
+        font-size: 5.3vw;
+    }
+
+    .prof-head-details h4 {
+        font-size: 3.6vw;
+    }
+
+    .countries-unlocked {
+        justify-content: center;
+    }
+
+    .country-name {
+        margin: 1.5vw 1.2vw;
+        font-size: 3.2vw;
+        padding: 5px 12px;
+    }
+
+    .personal-info {
+        margin: 7vw auto;
+        width: 100%;
+    }
+
+    .personal-info h1 {
+        margin: auto;
+        font-size: 5.3vw;
+    }
+
+    .details-container {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .info-container,
+    .birth-container {
+        margin-top: 7.3vw;
+        width: 90%;
+    }
+
+    .birth-container {
+        width: 100%;
+    }
+
+    .info-container h4,
+    .birth-container h4 {
+        font-size: 4.1vw;
+    }
+
+    .info-container h3 {
+        font-size: 4.5vw;
+    }
+
+    .birth-flex {
+        flex-wrap: wrap;
+    }
+
+    .birth-info {
+        font-size: 3.3vw;
+        margin-bottom: 3vw;
+        margin-right: 3vw;
+        padding: 0.65vw 1.5vw;
+    }
+
+    .birth-info span,
+    .birth-info img {
+        margin: 0 1vw;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .dash-page {
+        padding-top: 85px;
+    }
+
+    .dash-container {
+        margin: 4vw auto 10vw;
+    }
+
+    .profile-head {
+        flex-direction: column;
+    }
+
+    .profile-head img {
+        margin-bottom: 3vw;
+        width: 15.6vw;
+        height: 15.6vw;
+    }
+
+    .prof-head-details {
+        align-items: center;
+    }
+
+    .prof-head-details h1 {
+        font-size: 3.1vw;
+    }
+
+    .prof-head-details h4 {
+        font-size: 2vw;
+    }
+
+    .countries-unlocked {
+        justify-content: center;
+    }
+
+    .country-name {
+        margin: 1vw;
+        font-size: 1.8vw;
+        padding: 5px 12px;
+    }
+
+    .personal-info {
+        margin: 4vw auto;
+        width: 100%;
+    }
+
+    .personal-info h1 {
+        margin: auto;
+        font-size: 3.1vw;
+    }
+
+    .details-container {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .info-container,
+    .birth-container {
+        margin-top: 7.3vw;
+        width: 90%;
+    }
+
+    .birth-container {
+        width: 100%;
+    }
+
+    .info-container h4,
+    .birth-container h4 {
+        font-size: 2.34vw;
+    }
+
+    .info-container h3 {
+        font-size: 2.6vw;
+    }
+
+    .birth-info {
+        font-size: 2.1vw;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .dash-page {
+        padding-top: 9vw;
+    }
+
+    .dash-container {
+        margin: 5vw auto 8vw;
+    }
+
+    .profile-head img {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .prof-head-details h1 {
+        font-size: 2.4vw;
+    }
+
+    .prof-head-details h4 {
+        font-size: 1.61vw;
+    }
+
+    .country-name {
+        font-size: 1.41vw;
+        padding: 5px 2vw;
+        margin: 0 1.41vw 1.41vw 0;
+    }
+
+    .personal-info {
+        margin: 4vw auto;
+    }
+
+    .personal-info h1 {
+        font-size: 2.41vw;
+        margin: 0;
+    }
+
+    .details-container {
+        justify-content: space-between;
+        margin-top: 4.53vw;
+    }
+
+    .info-container {
+        width: 45%;
+        margin: 0;
+    }
+
+    .info-container h4,
+    .birth-container h4 {
+        font-size: 1.81vw;
+    }
+
+    .info-container h3 {
+        font-size: 2vw;
+    }
+
+    .birth-flex {
+        margin-top: 2vw;
+    }
+
+    .birth-info {
+        font-size: 1.61vw;
+        padding: 3px 1vw;
+    }
+
+    .birth-info span,
+    .birth-info img {
+        margin: 0 0.5vw;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .dash-page {
+        padding-top: 90px;
+    }
+
+    .country-name {
+        padding: 5px 2vw;
+    }
+
+    .details-container {
+        justify-content: space-between;
+    }
+
+    .info-container {
+        width: 45%;
+        margin: 0;
+    }
+
+    .birth-info {
+        padding: 3px 1vw;
+    }
 }

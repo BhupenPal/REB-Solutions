@@ -34,6 +34,10 @@ Router.post('/search', ensureAuthenticated, async (req, res) => {
     res.send(`Subscribe to get the data of ${country}`)
 })
 
+Router.get('/search', ensureAuthenticated, (req, res, next) => {
+    res.render('Search')
+})
+
 Router.get('/dashboard', ensureAuthenticated, (req, res, next) => {
     res.render('Dashboard')
 })

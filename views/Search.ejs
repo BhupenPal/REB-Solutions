@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/Home.css">
+    <link rel="stylesheet" href="/assets/css/Search.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <%-include('./Components/Header.ejs') %>
+    <div class="search-page">
+        <div class="search-banner">
+            <div class="search-img">
+            </div>
+            <%-include('./Components/SearchBar.ejs') %>
+        </div>
+        <div class="search-page-container">
+            <table class="search-data-table">
+                <thead>
+                    <tr class="heading-row">
+                        <th class="company-clm">Company Name</th>
+                        <th class="email-clm">Email ID</th>
+                        <th class="number-clm">Phone Number</th>
+                        <!-- <th></th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="search-data-row">
+                        <td>
+                            Primarydata Technologies
+                            <br /><a href="" class="company-link">www.pdtech.com</a>
+                        </td>
+                        <td>
+                            <a href="mailto: pdtech@gmail.com">pdtech@gmail.com</a>
+                        </td>
+                        <td>+91 983XXX3914</td>
+                        <td>
+                            <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
+                        </td>
+                    </tr>
+                    <tr class="search-data-row">
+                        <td>
+                            Primarydata Technologies
+                            <br /><a href="" class="company-link">www.pdtech.com</a>
+                        </td>
+                        <td>
+                            <a href="mailto: pdtech@gmail.com">pdtech@gmail.com</a>
+                        </td>
+                        <td>+91 983XXX3914</td>
+                        <td>
+                            <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
+                        </td>
+                    </tr>
+                    <tr class="search-data-row">
+                        <td>
+                            Primarydata Technologies
+                            <br /><a href="" class="company-link">www.pdtech.com</a>
+                        </td>
+                        <td>
+                            <a href="mailto: pdtech@gmail.com">pdtech@gmail.com</a>
+                        </td>
+                        <td>+91 983XXX3914</td>
+                        <td>
+                            <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
+                        </td>
+                    </tr>
+                    <tr class="search-data-row">
+                        <td>
+                            Primarydata Technologies
+                            <br /><a href="" class="company-link">www.pdtech.com</a>
+                        </td>
+                        <td>
+                            <a href="mailto: pdtech@gmail.com">pdtech@gmail.com</a>
+                        </td>
+                        <td>+91 983XXX3914</td>
+                        <td>
+                            <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
+                        </td>
+                    </tr>
+                    <tr class="search-data-row">
+                        <td>
+                            Primarydata Technologies
+                            <br /><a href="" class="company-link">www.pdtech.com</a>
+                        </td>
+                        <td>
+                            <a href="mailto: pdtech@gmail.com">pdtech@gmail.com</a>
+                        </td>
+                        <td>+91 983XXX3914</td>
+                        <td>
+                            <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
+                        </td>
+                    </tr>
+                    <tr class="search-data-row">
+                        <td>
+                            Primarydata Technologies
+                            <br /><a href="" class="company-link">www.pdtech.com</a>
+                        </td>
+                        <td>
+                            <a href="mailto: pdtech@gmail.com">pdtech@gmail.com</a>
+                        </td>
+                        <td>+91 983XXX3914</td>
+                        <td>
+                            <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="load-btn">
+            <button class="search-button">Load More</button>
+        </div>
+    </div>
+
+
+    <%-include('./Components/Footer.ejs') %>
+    <script src="/assets/scripts/index.js"></script>
+    <script src="/assets/scripts/Search.js"></script>
+    <script src="/assets/scripts/CountryCity.js"></script>
+</body>
+
+</html>
