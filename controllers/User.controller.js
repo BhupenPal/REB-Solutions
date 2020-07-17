@@ -24,18 +24,19 @@ Router.get('/logout', ensureAuthenticated, (req, res, next) => {
 })
 
 Router.post('/search', ensureAuthenticated, async (req, res) => {
+    // console.log(req.params)
     const country = req.body.countrylist
     const city = req.body.citylist
     const hasCountry = await User.findOne({ [country]: true })
     if (hasCountry) {
         const data = await companies.find({ Location: city })
-        return res.render('result', { data })
+        return res.render('Search', { data })
     }
     res.send(`Subscribe to get the data of ${country}`)
 })
 
 Router.get('/search', ensureAuthenticated, (req, res, next) => {
-    res.render('Search')
+    res.render('Search' , {user : req.user, data: null})
 })
 
 Router.get('/dashboard', ensureAuthenticated, (req, res, next) => {

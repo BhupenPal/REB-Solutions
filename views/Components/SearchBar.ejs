@@ -13,7 +13,7 @@
     <div class="country flex-cen">
         <img src="/assets/images/svgs/map.svg" alt="">
         <div class="search-info country-info">
-            <select name="countrylist" id="" onchange="setCities(this)">
+            <select name="countrylist" id="country" onchange="setCities(this)">
                 <option value="Country" disabled selected>Country</option>
                 <% if(user) { %>
                 <% if(user.India === true) { %>
