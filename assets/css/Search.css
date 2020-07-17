@@ -9,6 +9,7 @@
 
 .search-page {
     margin-bottom: 16vh;
+    padding-top: 50px;
 }
 
 .search-banner {
@@ -75,7 +76,6 @@
     background: #FFFFFF;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    display: none;
 }
 
 .search-data-row td {

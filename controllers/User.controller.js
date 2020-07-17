@@ -43,4 +43,7 @@ Router.get('/dashboard', ensureAuthenticated, (req, res, next) => {
     res.render('Dashboard')
 })
 
+Router.get('/bookmark' , ensureAuthenticated , (req,res)=> {
+    res.render('bookmarks')
+})
 module.exports = Router

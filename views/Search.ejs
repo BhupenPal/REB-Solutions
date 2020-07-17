@@ -41,7 +41,7 @@ query.min.js">
                 </thead>
                
               <%  if(data) { %>
-                <tbody>
+                <tbody id="searchTable">
                  <% for(let i=0; i< data.length ; i++){ %>
                     <tr class="search-data-row">
                        <td>  <%= data[i].CompanyName %>
@@ -54,7 +54,7 @@ query.min.js">
                        </td>
                        <td><%= data[i].MobileNum %></td>
                        <td>
-                           <a href="" id="fav"><img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt=""></a>
+                           <a href=""><img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt=""></a>
                        </td>
                      
                     </tr>
@@ -148,6 +148,7 @@ query.min.js">
     <script src="/assets/scripts/Search.js"></script>
     <script src="/assets/scripts/CountryCity.js"></script>
     <script src="/assets/scripts/load.js"></script>
+    <script src="/assets/scripts/bookmark.js"></script>
 </body>
 
 </html>

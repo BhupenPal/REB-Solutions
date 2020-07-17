@@ -6,7 +6,6 @@ $(document).ready(function(){
         if($('.search-data-row:hidden').length == 0 ){
             $('#load').css('visibility' , 'hidden')
         }
-    
 
    })
 

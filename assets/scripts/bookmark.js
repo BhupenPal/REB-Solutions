@@ -11,39 +11,41 @@
 			    } else {
 			      favorites = JSON.parse(storage.favorites);
 			    }
-			    updateList();
+			   
 
-			    $('#fav').click(function(e) {
+			    $('#searchTable').on("click", "tr td a" , function(e) {
                     e.preventDefault()
                   var $row = $(this).closest('tr');
                   var $tds = $row.find('td')
-                  console.log($tds[0].childNodes[0])
-                  console.log($tds[1].childNodes[0])
+                  console.log($tds[0].childNodes)
+                  console.log($tds[1].childNodes)
                   console.log($tds[2].childNodes[0])
-                //   addFavorite($tds[0].text(), $td[1].text(), $tds[2].text())
-			    //   updateList();
+                  addFavorite($tds[0].childNodes[0].data, $tds[1].childNodes[1].childNodes[0].data, $tds[2].childNodes[0].data,$tds)
+                  
 			    });
 
-			    $('#list').on('click', 'li a', function() {
-			      deleteFavorite($(this).data('id'));
-			      updateList();
-			    });
+			    // $('#searchTable').on("click" , "tr td a" , function() {
+			    //   deleteFavorite($(this)[0].attributes[1].value);
+			      
+			    // });
 			  } else {
 			    // No support for local storage
 			    // Fall back to cookies or session based storage
 			  }
 			});
 
-			function addFavorite(name,email,number) {
+			function addFavorite(name,email,number,tds) {
+                var id = chance.hash({
+                    length: 15
+                  }) 
 			  favorites.push({
-			    id: chance.hash({
-			      length: 15
-			    }),
+			    id: id ,
                name : name,
                email : email,
                number  :number
 			  });
-			  storage.setItem('favorites', JSON.stringify(favorites));
+              storage.setItem('favorites', JSON.stringify(favorites));
+            //   tds[3].attr('data-id', id)
 			}
 
 			function deleteFavorite(id) {
@@ -54,20 +56,20 @@
 			  }
 			  storage.setItem('favorites', JSON.stringify(favorites));
 			}
-
 			function updateList() {
-			  $('#list').empty();
 			  if (typeof favorites !== 'undefined' && favorites.length > 0) {
                 
 			    for (var i in favorites) {
-                    console.log( favorites[i].name , favorites[i].email , favorites[i].number)
-			      $('#list').append('<li>' +
-			        favorites[i].name +  ' ' + favorites[i].email + ''+ favorites[i].number + 
-			        '&nbsp;&nbsp;&nbsp;&nbsp;' +
-			        '<a class="delete" href="#" data-id="' + favorites[i].id + '">delete</a>' +
-			        '</li>');
+                    console.log('Update List console' ,favorites[i].name , favorites[i].email , favorites[i].number)
+                  $('.search-data-table').find('tbody').append("<tr class='search-data-row'>" +
+                   "<td>" + favorites[i].name +
+                  "<br /><a href='' class='company-link'>"+ favorites[i].email + "</a>" + 
+                  "</td>" + 
+                  "<td>"+
+                  "<a href='mailto:'" + favorites[i].email + "'>" + favorites[i].email + "</a></td>"+
+                "<td>" + favorites[i].number + 
+                 "</td>"+
+                "</tr>")
 			    }
-			  } else {
-			    $('#list').append('<li>Nothing stored!</li>');
-			  }
+			  } 
 			}
