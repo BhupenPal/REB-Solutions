@@ -21,11 +21,30 @@
                     <h1>My Profile</h1>
                     <h4>Countries Unlocked</h4>
                     <div class="countries-unlocked">
-                        <div class="country-name">USA</div>
-                        <div class="country-name">United Kingdom</div>
-                        <div class="country-name">India</div>
-                        <div class="country-name">France</div>
-                        <div class="country-name">Malaysia</div>
+                        <% if(user.India) { %>
+                            <div class="country-name">India</div>
+                        <% } %>
+                        <% if(user.USA) { %>
+                            <div class="country-name">USA</div>
+                        <% } %>
+                        <% if(user.UK) { %>
+                            <div class="country-name">United Kingdom</div>
+                        <% } %>
+                        <% if(user.Gulf) { %>
+                            <div class="country-name">Gulf</div>
+                        <% } %>
+                        <% if(user.Singapore) { %>
+                            <div class="country-name">Singapore</div>
+                        <% } %>
+                        <% if(user.Malaysia) { %>
+                            <div class="country-name">Malaysia</div>
+                        <% } %>
+                        <% if(user.Indonesia) { %>
+                            <div class="country-name">Indonesia</div>
+                        <% } %>
+                        <% if(user.Africa) { %>
+                            <div class="country-name">Africa</div>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -34,21 +53,21 @@
                 <div class="details-container">
                     <div class="info-container">
                         <h4>First Name</h4>
-                        <h3>Mark</h3>
+                        <h3><%= user.FirstName %></h3>
                     </div>
                     <div class="info-container">
                         <h4>Last Name</h4>
-                        <h3>Hughes</h3>
+                        <h3><%= user.LastName %></h3>
                     </div>
                 </div>
                 <div class="details-container">
                     <div class="info-container">
                         <h4>Email ID</h4>
-                        <h3>mark.hughes@gmail.com</h3>
+                        <h3><%= user.Email %></h3>
                     </div>
                     <div class="info-container">
                         <h4>Phone Number</h4>
-                        <h3><span>+91</span>92XX529203</h3>
+                        <h3><%= user.Phone %></h3>
                     </div>
                 </div>
                 <div class="details-container">

@@ -1,37 +1,57 @@
-const AdminBro = require('admin-bro')
-const AdminBroExpress = require('admin-bro-expressjs')
-const AdminBroMongoose = require('admin-bro-mongoose')
+const AdminBro = require("admin-bro");
+const AdminBroExpress = require("admin-bro-expressjs");
+const AdminBroMongoose = require("admin-bro-mongoose");
 
-const mongoose = require('mongoose')
-const UserModel = require('../models/User.model')
+const mongoose = require("mongoose");
+const UserModel = require("../models/User.model");
+const CompanyModel = require("../models/Company.model");
 
-AdminBro.registerAdapter(AdminBroMongoose)
+AdminBro.registerAdapter(AdminBroMongoose);
 
 const adminBro = new AdminBro({
   databases: [mongoose],
-  rootPath: '/admin',
-})
+  resources: [
+    {
+      resource: UserModel,
+      options: { parent: { name: "Users" } }
+    },
+    {
+      resource: CompanyModel,
+      options: { parent: { name: "Companies" } }
+    }
+  ],
+  rootPath: "/admin",
+  branding: {
+    logo: "../assets/images/icons/logo.png",
+    companyName: "REB Solutions",
+    favicon: "../assets/images/icons/logo.png",
+    softwareBrothers: false,
+  },
+  dashboard: {
+    component: AdminBro.bundle("./services/Dashboard.tsx"),
+  },
+});
 
 const ADMIN = {
-  Email: process.env.ADMIN_EMAIL || 'Test',
-  Password: process.env.ADMIN_PASS || 'Password'
-}
+  Email: process.env.ADMIN_EMAIL || "Test",
+  Password: process.env.ADMIN_PASS || "Password",
+};
 
 module.exports = AdminBroExpress.buildAuthenticatedRouter(
   adminBro,
   {
-    cookieName: process.env.COOKIE_NAME || 'admin-bro',
-    cookiePassword: process.env.COOKIE_PASS || 'supersecret-long-password',
+    cookieName: process.env.COOKIE_NAME || "admin-bro",
+    cookiePassword: process.env.COOKIE_PASS || "supersecret-long-password",
     authenticate: async (Email, Password) => {
       if (Email === ADMIN.Email && Password === ADMIN.Password) {
-        return ADMIN
+        return ADMIN;
       }
-      return null
-    }
+      return null;
+    },
   },
   null,
   {
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
   }
-)
+);
