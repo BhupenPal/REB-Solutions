@@ -1,0 +1,350 @@
+.Head {
+    transition: all .3s;
+}
+
+.head-scroll {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.search-page {
+    margin-bottom: 16vh;
+    padding-top: 50px;
+}
+
+.search-banner {
+    background: linear-gradient(180deg, #FFFFFF 0%, #84A1EB 99.99%);
+    height: 540px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-img {
+    position: absolute;
+    bottom: -4px;
+    height: 243px;
+    width: 100%;
+    background-image: url(/assets/images/Cityscapes.png);
+    background-repeat: repeat-x;
+}
+
+.search-bar {
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.search-page-container {
+    width: 85%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.search-data-table {
+    width: 98%;
+    margin: 20px auto 0;
+    font-family: Lato;
+    font-weight: 400;
+    border-spacing: 0 35px;
+}
+
+.heading-row {
+    color: #737373;
+    font-size: 28px;
+    text-align: left;
+}
+
+.company-clm,
+.email-clm,
+.number-clm {
+    padding: 0 50px;
+}
+
+.company-clm {
+    width: 37%;
+}
+
+.email-clm {
+    width: 28%;
+}
+
+.number-clm {
+    width: 25%;
+}
+.search-data-row {
+    background: #FFFFFF;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.search-data-row td {
+    font-size: 25px;
+    padding: 32px 50px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.company-link {
+    color: #A2A2A2;
+    font-size: 22px;
+}
+
+.load-btn {
+    text-align: center;
+}
+#load:hover{
+    cursor: pointer;
+}
+
+.bookmark-click {
+    filter: invert(24%) sepia(69%) saturate(6035%) hue-rotate(353deg) brightness(100%) contrast(136%);
+}
+
+@media only screen and (max-width: 576px) {
+    .search-page {
+        margin-bottom: 18vw;
+    }
+
+    .search-banner {
+        background: linear-gradient(180deg, #FFFFFF 0%, #84A1EB 99.99%);
+        height: 94vh;
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 81px;
+    }
+
+    .search-bar {
+        margin-top: -10vh;
+    }
+
+    .search-page-container {
+        width: 90%;
+    }
+
+    .search-data-table {
+        text-align: center;
+        width: 180%;
+        padding: 0 15px 0 8px;
+        border-spacing: 0 5.2vw;
+    }
+
+    .heading-row {
+        font-size: 4.8vw;
+        text-align: center;
+    }
+
+    .company-clm,
+    .email-clm,
+    .number-clm {
+        padding: 0 5vw;
+    }
+
+    .company-clm {
+        width: 32%;
+    }
+
+    .number-clm {
+        width: 30%;
+    }
+
+    .search-data-row td {
+        font-size: 4vw;
+        padding: 4.5vw 5vw;
+    }
+
+    .company-link {
+        font-size: 3.5vw;
+    }
+
+    .bookmark {
+        width: 3.7vw;
+    }
+
+    .load-btn .search-button {
+        margin-top: 5vw;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .search-page {
+        margin-bottom: 18vw;
+    }
+
+    .search-banner {
+        background: linear-gradient(180deg, #FFFFFF 0%, #84A1EB 99.99%);
+        height: 110vw;
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 81px;
+    }
+
+    .search-bar {
+        margin-top: -10vw;
+    }
+
+    .search-page-container {
+        width: 90%;
+    }
+
+    .search-data-table {
+        text-align: center;
+        width: 150%;
+        padding: 0 15px 0 8px;
+        border-spacing: 0 5.2vw;
+    }
+
+    .heading-row {
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .company-clm,
+    .email-clm,
+    .number-clm {
+        padding: 0;
+    }
+
+    .company-clm {
+        width: 32%;
+    }
+
+    .number-clm {
+        width: 30%;
+    }
+
+    .search-data-row td {
+        font-size: 3.2vw;
+        padding: 3.5vw 4.2vw;
+    }
+
+    .company-link {
+        font-size: 2.8vw;
+    }
+
+    .bookmark {
+        width: 3.1vw;
+    }
+
+    .load-btn .search-button {
+        margin-top: 3vw;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .search-page {
+        margin-bottom: 10vw;
+    }
+
+    .search-page-container {
+        width: 90%;
+    }
+    
+    .search-data-table {
+        text-align: center;
+        width: 130%;
+        padding: 0 15px 0 8px;
+        border-spacing: 0 3.5vw;
+    }
+
+    .heading-row {
+        font-size: 2.8vw;
+        text-align: center;
+    }
+
+    .company-clm,
+    .email-clm,
+    .number-clm {
+        padding: 0;
+    }
+
+    .company-clm {
+        width: 32%;
+    }
+
+    .number-clm {
+        width: 30%;
+    }
+
+    .search-data-row td {
+        font-size: 2.52vw;
+        padding: 3.2vw 4vw;
+    }
+
+    .company-link {
+        font-size: 2.2vw;
+    }
+
+    .bookmark {
+        width: 2.6vw;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .search-page {
+        margin-bottom: 9vw;
+    }
+
+    .search-page-container {
+        width: 90%;
+    }
+    
+    .search-data-table {
+        border-spacing: 0 2.9vw;
+    }
+
+    .company-clm,
+    .email-clm,
+    .number-clm {
+        padding: 0 2.5vw;
+    }
+    
+    .company-clm {
+        width: 34%;
+    }
+
+    .number-clm {
+        width: 28%;
+    }
+
+    .search-data-row td {
+        font-size: 2vw;
+        padding: 2.6vw 2.8vw;
+    }
+
+    .company-link {
+        font-size: 1.8vw;
+    }
+
+    .bookmark {
+        width: 2vw;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1440px) {
+    .search-page-container {
+        width: 90%;
+    }
+    
+    .company-clm,
+    .email-clm,
+    .number-clm {
+        padding: 0 2.5vw;
+    }
+    
+    .company-clm {
+        width: 34%;
+    }
+
+    .number-clm {
+        width: 28%;
+    }
+
+    .search-data-row td {
+        padding: 2.6vw 2.8vw;
+    }
+
+    .bookmark {
+        width: 2vw;
+    }
+}
