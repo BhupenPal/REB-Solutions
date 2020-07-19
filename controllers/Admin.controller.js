@@ -5,6 +5,7 @@ const AdminBroMongoose = require("admin-bro-mongoose");
 const mongoose = require("mongoose");
 const UserModel = require("../models/User.model");
 const CompanyModel = require("../models/Company.model");
+const JoinRequests = require("../models/Request.model");
 
 AdminBro.registerAdapter(AdminBroMongoose);
 
@@ -18,6 +19,10 @@ const adminBro = new AdminBro({
     {
       resource: CompanyModel,
       options: { parent: { name: "Companies" } }
+    },
+    {
+      resource: JoinRequests,
+      options: { parent: { name: "Join Requests" } }
     }
   ],
   rootPath: "/admin",

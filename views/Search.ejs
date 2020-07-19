@@ -10,18 +10,17 @@
     <link rel="stylesheet" href="/assets/css/Search.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <script
-src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/j
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/j
 query.min.js">
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.0.3/chance.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.0.3/chance.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
     <%-include('./Components/Header.ejs') %>
     <div id="list">
-    
+
     </div>
     <div class="search-page">
         <div class="search-banner">
@@ -39,29 +38,29 @@ query.min.js">
                         <!-- <th></th> -->
                     </tr>
                 </thead>
-               
-              <%  if(data) { %>
+
+                <%  if(data) { %>
                 <tbody id="searchTable">
-                 <% for(let i=0; i< data.length ; i++){ %>
+                    <% for(let i=0; i< data.length ; i++){ %>
                     <tr class="search-data-row">
-                       <td>  <%= data[i].CompanyName %>
-                           <br /><a href="" class="company-link">
-                               <%= data[i].CorporateEmail %>
-                           </a>
-                       </td>
-                       <td>
-                           <a href="mailto: <%= data[i].CorporateEmail %>"> <%= data[i].CorporateEmail %></a>
-                       </td>
-                       <td><%= data[i].MobileNum %></td>
-                       <td>
-                           <a href=""><img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt=""></a>
-                       </td>
-                     
+                        <td> <%= data[i].CompanyName %>
+                            <br /><a href="" class="company-link">
+                                <%= data[i].CorporateEmail %>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="mailto: <%= data[i].CorporateEmail %>"> <%= data[i].CorporateEmail %></a>
+                        </td>
+                        <td><%= data[i].MobileNum %></td>
+                        <td>
+                            <a href=""><img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt=""></a>
+                        </td>
+
                     </tr>
 
 
-               <% } %>
-<!-- <tr class="search-data-row">
+                    <% } %>
+                    <!-- <tr class="search-data-row">
                 
                   
                   
@@ -132,14 +131,16 @@ query.min.js">
                        <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
                    </td>
                </tr> -->
-           </tbody>
-             <% } %>
-                   
+                </tbody>
+                <% } %>
+
             </table>
         </div>
+        <% if (data !== null) { %>
         <div class="load-btn">
             <button class="search-button" id="load">Load More</button>
         </div>
+        <% } %>
     </div>
 
 

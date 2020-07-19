@@ -8,21 +8,20 @@
         <nav class="header-menu">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/user/search">Find Companies</a></li>
+                <li><a href="/search">Find Companies</a></li>
                 <li><a href="/user/bookmark">Bookmark</a></li>
             </ul>
         </nav>
         <div class="header-login">
             <ul>
-                <li><a href=""><img src="/assets/images/svgs/bell.svg" id="bell" alt="" /></a></li>
                 <% if(!user) { %>
-                    <li><a href="">Join Us</a></li>
-                 <li><a href="/user/login">Login</a></li>
+                <li><a href="/join-us">Join Us</a></li>
+                <li><a href="/user/login">Login</a></li>
                 <% } else { %>
-                    <li><a href="/user/dashboard">Dashboard</a></li>
-                    <li><a href="/user/logout">Logout</a></li>
+                <li><a href="/user/dashboard">Dashboard</a></li>
+                <li><a href="/user/logout">Logout</a></li>
                 <% } %>
-               
+
             </ul>
         </div>
         <div class="hamburger">
