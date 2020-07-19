@@ -2,6 +2,8 @@ module.exports = {
 
     ensureAuthenticated: function (req, res, next) {
       req.session.redirectTo = req.originalUrl;
+      req.session.country = req.body.country;
+      req.session.city = req.body.city;
       if (req.isAuthenticated()) {
         return next();
       }
