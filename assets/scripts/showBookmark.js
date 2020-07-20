@@ -2,10 +2,10 @@ var favorites;
 var storage;
 $(document).ready(function () {
   storage = window.localStorage;
-  if (storage.favorites == undefined) {
+  if (storage.getItem('Bookmarks') == undefined) {
     favorites = [];
   } else {
-    favorites = JSON.parse(storage.favorites);
+    favorites = JSON.parse(storage.getItem('Bookmarks'));
   }
 
   $('#bookmarkTable').on("click", "tr td a", function (e) {
@@ -31,7 +31,7 @@ function deleteFavorite(id) {
       favorites.splice(i, 1);
     }
   }
-  storage.setItem('favorites', JSON.stringify(favorites));
+  storage.setItem('Bookmarks', JSON.stringify(favorites));
   console.log(favorites)
 }
 

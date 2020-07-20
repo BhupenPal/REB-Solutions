@@ -15,10 +15,10 @@ window.addEventListener('scroll', () => {
     }
 });
 
-for (let i = 0; i < bookmark.length; i++) {
-    bookmark[i].addEventListener("click", () => {
-        bookmark[i].classList.toggle('bookmark-click');
-    });
-}
+// for (let i = 0; i < bookmark.length; i++) {
+//     bookmark[i].addEventListener("click", () => {
+//         bookmark[i].classList.toggle('bookmark-click');
+//     });
+// }
 
 

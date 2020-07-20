@@ -49,11 +49,16 @@ query.min.js">
 
     <%-include('./Components/Footer.ejs') %>
     <script src="/assets/scripts/index.js"></script>
-    <script src="/assets/scripts/Search.js"></script>
     <script src="/assets/scripts/CountryCity.js"></script>
     <script src="/assets/scripts/load.js"></script>
+    <script src="/assets/scripts/Search.js"></script>
     <script src="/assets/scripts/bookmark.js"></script>
     <script src="/assets/scripts/swal.js"></script>
+    <script>
+        function toggleBookmark(img){
+            img.classList.toggle('bookmark-click')
+        }
+    </script>
 </body>
 
 </html>
