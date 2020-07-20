@@ -13,7 +13,7 @@ $(document).ready(function () {
         xhr.onload = function () {
             if (this.status === 200) {
                 try {
-                    data = JSON.parse(this.response).data
+                    ResponseData = JSON.parse(this.response)
                 } catch (err) {
                     return Swal.fire({
                         position: 'top-end',
@@ -26,18 +26,17 @@ $(document).ready(function () {
                 if (this.response.includes('Please subscribe')) {
                     return Swal.fire({
                         position: 'top-end',
-                        title: data,
+                        title: ResponseData.data,
                         showConfirmButton: false,
                         timer: 2000
                     })
                 }
 
-                if (data.length > 0) {
-                    appendRows(data)
-                }
-                
-                if (data.length === 0) {
+                console.log(ResponseData.EndPage, count)
+                if (ResponseData.EndPage == count - 1) {
                     $('.load-btn').hide()
+                } else {
+                    appendRows(ResponseData.data)
                 }
 
             } else {
@@ -79,7 +78,6 @@ $(document).ready(function () {
                 }
 
                 appendRows(data)
-
             } else {
                 console.log("ERROR: AJAX COULD NOT CONNECT");
             }
@@ -111,7 +109,7 @@ function appendRows(data) {
             "<td>" + data[i].MobileNum +
             "</td>" +
             "<td>" +
-            "<a href='' data-id='" + data[i]._id + "'><img src='/assets/images/svgs/bookmark.svg' class='bookmark bookmark-click' alt=''></a>" +
+            "<a href='' data-id='" + data[i]._id + "'><img src='/assets/images/svgs/bookmark.svg' class='bookmark' alt=''></a>" +
             "</td>" +
             "</tr>")
     }

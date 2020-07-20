@@ -22,7 +22,7 @@ Router.post("/search", ensureAuthenticated, async (req, res) => {
             .limit(size)
             .skip(size * parseInt(pageNo) - size);
 
-        const TotalDocuments = await CompanyModel.estimatedDocumentCount({ Location: city});
+        const TotalDocuments = await CompanyModel.countDocuments({ Location: city});
         let EndPage = Math.ceil(TotalDocuments / size);
             EndPage = EndPage == 0 ? 1 : EndPage;
 
