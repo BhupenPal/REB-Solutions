@@ -1,5 +1,6 @@
+var Bookmarks = JSON.parse(localStorage.getItem('Bookmarks'))
 $(document).ready(function () {
-
+    var $favs
     let count = 1;
     $('.load-btn').on('click', function (e) {
         e.preventDefault()
@@ -94,6 +95,11 @@ $(document).ready(function () {
             $('#country').val(dataObj.CountryElement)
             $('#city-trigger').val(dataObj.CityElement)
             appendRows(dataObj.data)
+            $favs = $('.bookmark-link')
+            console.log($favs)
+            if(Bookmarks!==undefined){
+                checkFavorite($favs)
+            }
             localStorage.removeItem('SearchData')
         }
     }
@@ -111,8 +117,26 @@ function appendRows(data) {
             "<td>" + data[i].MobileNum +
             "</td>" +
             "<td>" +
-            "<a href='' data-id='" + data[i]._id + "'><img src='/assets/images/svgs/bookmark.svg' class='bookmark' alt='' onclick='toggleBookmark(this)'></a>" +
+            "<a href='' data-id='" + data[i]._id + "' class='bookmark-link'><img src='/assets/images/svgs/bookmark.svg' class='bookmark' alt='' onclick='toggleBookmark(this)'></a>" +
             "</td>" +
             "</tr>")
     }
+}
+
+function checkFavorite(data){
+   for(let i=0;i<data.length;i++){
+       for(let j=0;j<Bookmarks.length;j++)
+       {
+        //    console.log(Bookmarks[j])
+           if(Bookmarks[j].id === data[i].attributes[1].value){
+               data[i].childNodes[0].classList.add('bookmark-click')
+           }
+       }
+   }
+
+    // Bookmarks.forEach((b)=> {
+    //     if(b.id === element[0].attributes[1].value){
+    //         element[0].childNodes[0].classList.add('bookmark-click')
+    //     }
+    // })
 }
