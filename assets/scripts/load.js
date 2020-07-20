@@ -137,7 +137,7 @@ let count =1;
           "<td>" + data[i].MobileNum +
           "</td>" +
           "<td>" +
-          "<a href='' data-id='" + data[i]._id + "'><img src='/assets/images/svgs/bookmark.svg' class='bookmark bookmark-click' alt=''></a>" +
+          "<a href='' data-id='" + data[i]._id + "'><img src='/assets/images/svgs/bookmark.svg' alt=''></a>" +
           "</td>" +
           "</tr>")
       }

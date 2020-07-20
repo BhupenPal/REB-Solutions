@@ -43,6 +43,7 @@ SearchForm.addEventListener('submit', (e) => {
 
            
             console.log(data)
+
             // bake_cookie('myData', data)
            var dataObj = {
                data : data,
@@ -62,7 +63,49 @@ SearchForm.addEventListener('submit', (e) => {
     xhr.send(`country=${CountryElement}&city=${CityElement}&pageNo=1`)
 })
 
+let cityCount = 0;
+const countrySelect = document.getElementById('country')
+countrySelect.addEventListener('onchange', (e)=>{
+e.preventDefault()
+cityCount++;
+const CountryElement = document.getElementById('country').value
+const xhr = new XMLHttpRequest()
+xhr.open('POST', '/getcity', true)
+xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+xhr.onload = function () {
+    if (this.status === 200) {
+        try {
+            data = JSON.parse(this.response).data
+        } catch (err) {
+            return Swal.fire({
+                position: 'top-end',
+                title: 'Please login first',
+                showConfirmButton: true,
+                timer: 1500
+            })
+        }
 
+        if (this.response.includes('Please subscribe')) {
+            return Swal.fire({
+                position: 'top-end',
+                title: data,
+                showConfirmButton: false,
+                timer: 2000
+            })
+        }
+
+       
+       
+
+        // console.log(read_cookie('myData'))
+
+    } else {
+        console.log("ERROR: AJAX COULD NOT CONNECT");
+    }
+}
+xhr.send(`country=${CountryElement}&pageNo=${cityCount}`)
+})
 
 
 // function bake_cookie(name, data) {
