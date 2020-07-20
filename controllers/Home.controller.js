@@ -17,15 +17,16 @@ Router.get("/search", ensureAuthenticated , (req, res, next) => {
 Router.post("/search", ensureAuthenticated, async (req, res) => {
     let { country, city, pageNo } = req.body;
     const size = 25;
-    console.log(size * parseInt(pageNo) - size,pageNo)
     if (req.user[country] !== undefined) {
         const data = await CompanyModel.find({ Location: city })
             .limit(size)
             .skip(size * parseInt(pageNo) - size);
-        res.json({ data, pageNo });
-        // data = JSON.parse(data)
-        // pageNo = JSON.parse(pageNo)
-        // res.render('Search', {data : res.json({data,pageNo}) , })
+
+        const TotalDocuments = await CompanyModel.estimatedDocumentCount({ Location: city});
+        let EndPage = Math.ceil(TotalDocuments / size);
+            EndPage = EndPage == 0 ? 1 : EndPage;
+
+        res.json({ data, pageNo, EndPage });
     } else {
         res.json({ data: `Please subscribe to view the data of ${country}` });
     }
