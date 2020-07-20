@@ -6,10 +6,10 @@ $(document).ready(function () {
 	chance = new Chance(); // Just for random hash generation
 	if (window.Storage != undefined) {
 		storage = window.localStorage;
-		if (storage.favorites == undefined) {
+		if (storage.getItem('favorites') == undefined) {
 			favorites = [];
 		} else {
-			favorites = JSON.parse(storage.favorites);
+			favorites = JSON.parse(storage.getItem('favorites'));
 		}
 
 		$('#searchTable').on("click", "tr td a", function (e) {

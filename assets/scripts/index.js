@@ -1,3 +1,5 @@
+// const { json } = require("express");
+let count=0
 let hamburger = document.querySelector(".hamburger");
 let hamMenu = document.querySelector(".ham-menu");
 let button = document.querySelector('.searh-button')
@@ -9,6 +11,7 @@ hamburger.addEventListener("click", () => {
 
 const SearchForm = document.getElementById('search-bar-form')
 SearchForm.addEventListener('submit', (e) => {
+   
     e.preventDefault()
     const CountryElement = document.getElementById('country').value
     const CityElement = document.getElementById('city-trigger').value
@@ -38,10 +41,52 @@ SearchForm.addEventListener('submit', (e) => {
                 })
             }
 
+           
             console.log(data)
+            // bake_cookie('myData', data)
+           var dataObj = {
+               data : data,
+               country : CountryElement,
+               city : CityElement
+                    }
+            localStorage.setItem('myData', JSON.stringify(dataObj))
+            console.log(JSON.parse(localStorage.getItem('myData')))
+
+            window.location = 'http://localhost:3000/search'
+            // console.log(read_cookie('myData'))
+
         } else {
             console.log("ERROR: AJAX COULD NOT CONNECT");
         }
     }
     xhr.send(`country=${CountryElement}&city=${CityElement}&pageNo=1`)
 })
+
+
+
+
+// function bake_cookie(name, data) {
+//     var d = new Date();
+//   d.setTime(d.getTime() + (24*60 * 60 * 1000));
+//   var expires = "expires="+d.toGMTString();
+//    var cookie = name + "=" + JSON.stringify(data)+ ";" + expires + ";path=/";
+// // var cookie = "name=Agrim"+";"+expires
+//     document.cookie = cookie;
+//   }
+
+//   function read_cookie(name) {
+//      name = name + "=";
+//   var ca = document.cookie.split(';');
+//   for(var i = 0; i < ca.length; i++) {
+//     var c = ca[i];
+//     while (c.charAt(0) == ' ') {
+//       c = c.substring(1);
+//     }
+//     if (c.indexOf(name) == 0) {
+//       return c.substring(name.length, c.length);
+//     }
+//   }
+//   return "";
+//    }
+
+   

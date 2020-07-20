@@ -19,9 +19,6 @@ query.min.js">
 
 <body>
     <%-include('./Components/Header.ejs') %>
-    <div id="list">
-
-    </div>
     <div class="search-page">
         <div class="search-banner">
             <div class="search-img">
@@ -38,109 +35,15 @@ query.min.js">
                         <!-- <th></th> -->
                     </tr>
                 </thead>
-
-                <%  if(data) { %>
                 <tbody id="searchTable">
-                    <% for(let i=0; i< data.length ; i++){ %>
-                    <tr class="search-data-row">
-                        <td> <%= data[i].CompanyName %>
-                            <br /><a href="" class="company-link">
-                                <%= data[i].CorporateEmail %>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="mailto: <%= data[i].CorporateEmail %>"> <%= data[i].CorporateEmail %></a>
-                        </td>
-                        <td><%= data[i].MobileNum %></td>
-                        <td>
-                            <a href=""><img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt=""></a>
-                        </td>
-
-                    </tr>
-
-
-                    <% } %>
-                    <!-- <tr class="search-data-row">
                 
-                  
-                  
-                  
-               </tr>
-               <tr class="search-data-row">
-                   <td>
-                       Primarydata Technologies
-                       <br /><a href="" class="company-link">www.pdtech.com</a>
-                   </td>
-                   <td>
-                       <a href="mailto: pdtech@gmail.com">pdtech@gmail.com</a>
-                   </td>
-                   <td>+91 983XXX3914</td>
-                   <td>
-                       <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
-                   </td>
-               </tr>
-               <tr class="search-data-row">
-                   <td>
-                       Primarydata Technologies
-                       <br /><a href="" class="company-link">www.pdtech.com</a>
-                   </td>
-                   <td>
-                       <a href="mailto: pdtech@gmail.com">pdtech@gmail.com</a>
-                   </td>
-                   <td>+91 983XXX3914</td>
-                   <td>
-                       <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
-                   </td>
-               </tr>
-               <tr class="search-data-row">
-                   <td>
-                       Primarydata Technologies
-                       <br /><a href="" class="company-link">www.pdtech.com</a>
-                   </td>
-                   <td>
-                       <a href="mailto: pdtech@gmail.com">pdtech@gmail.com</a>
-                   </td>
-                   <td>+91 983XXX3914</td>
-                   <td>
-                       <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
-                   </td>
-               </tr>
-               <tr class="search-data-row">
-                   <td>
-                       Primarydata Technologies
-                       <br /><a href="" class="company-link">www.pdtech.com</a>
-                   </td>
-                   <td>
-                       <a href="mailto: pdtech@gmail.com">pdtech@gmail.com</a>
-                   </td>
-                   <td>+91 983XXX3914</td>
-                   <td>
-                       <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
-                   </td>
-               </tr>
-               <tr class="search-data-row">
-                   <td>
-                       Primarydata Technologies
-                       <br /><a href="" class="company-link">www.pdtech.com</a>
-                   </td>
-                   <td>
-                       <a href="mailto: pdtech@gmail.com">pdtech@gmail.com</a>
-                   </td>
-                   <td>+91 983XXX3914</td>
-                   <td>
-                       <img src="/assets/images/svgs/bookmark.svg" class="bookmark" alt="">
-                   </td>
-               </tr> -->
                 </tbody>
-                <% } %>
 
             </table>
         </div>
-        <% if (data !== null) { %>
         <div class="load-btn">
             <button class="search-button" id="load">Load More</button>
         </div>
-        <% } %>
     </div>
 
 
@@ -150,6 +53,7 @@ query.min.js">
     <script src="/assets/scripts/CountryCity.js"></script>
     <script src="/assets/scripts/load.js"></script>
     <script src="/assets/scripts/bookmark.js"></script>
+    <script src="/assets/scripts/swal.js"></script>
 </body>
 
 </html>
