@@ -37,8 +37,7 @@
 
 .search-page-container {
     width: 85%;
-    margin: 0 auto;
-    overflow-x: auto;
+    margin: 0 50% 0 4%;
 }
 
 .search-data-table {
@@ -238,13 +237,15 @@
 
     .search-page-container {
         width: 90%;
+       
     }
     
     .search-data-table {
         text-align: center;
-        width: 130%;
+        width: 100%;
         padding: 0 15px 0 8px;
         border-spacing: 0 3.5vw;
+        margin-left: 0;
     }
 
     .heading-row {
@@ -267,8 +268,9 @@
     }
 
     .search-data-row td {
-        font-size: 2.52vw;
+        font-size: 2vw;
         padding: 3.2vw 4vw;
+        width: auto;
     }
 
     .company-link {

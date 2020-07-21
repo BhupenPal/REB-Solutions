@@ -1,4 +1,5 @@
 var Bookmarks = JSON.parse(localStorage.getItem('Bookmarks'))
+var rData = []
 $(document).ready(function () {
     var $favs
     let count = 1;
@@ -88,6 +89,47 @@ $(document).ready(function () {
         xhr.send(`country=${CountryElement}&city=${CityElement}&pageNo=1`)
     })
 
+    $('#searchTable').on('click','tr', function(e){
+        e.preventDefault()
+        // console.log(rData)
+      var $idx=   $(this).index()
+      var tempObj= rData[$idx]
+        console.log(tempObj)
+        return Swal.fire({
+            position : 'center',
+            title : tempObj.CompanyName,
+            width: 600,
+            html : ` <div class="container" style="font-size: medium; text-align: left; width: 100%;">
+            <div id="first-container" style="width: auto;background: linear-gradient(to right,#E3EBFE,#CCD2E1,#C0C1C3); margin-bottom: 15px; padding: 20px; box-shadow: 5px 7px lightgrey;">
+              <div style="padding: 15px;"><strong>Name: ${tempObj.CompanyName}</strong><br /></div>
+              <div style="padding: 15px;"><strong>Location: ${tempObj.Location}</strong><br/></div>
+              <div style="padding: 15px;"><strong>Website: ${tempObj.Website}</strong><br/></div>
+            </div>
+            <div id="second-container" style="background: linear-gradient(to right,#E3EBFE,#CCD2E1,#C0C1C3); margin-bottom: 15px; padding: 20px; box-shadow: 5px 7px lightgrey;">
+              <div style="padding: 15px;"><strong>Turnover: ${tempObj.Turnover}</strong><br /></div>
+              <div style="padding: 15px;"><strong>Employees: ${tempObj.Employees}</strong><br/></div>
+              <div style="padding: 15px;"><strong>Industry Type: ${tempObj.Industry}</strong><br/></div> 
+            </div>
+            <div id="third-container" style="display: flex;flex-direction: column;background: linear-gradient(to right,#E3EBFE,#CCD2E1,#C0C1C3); margin-bottom: 15px; padding: 20px; box-shadow: 5px 7px lightgrey;">
+              <div style="padding: 15px;display: flex;">
+                  <div style="width: 50%;"><strong>Person Name: ${tempObj.Agent}</strong></div>
+                  <div style="width: 50%;"><strong>Designation: ${tempObj.Designation}</strong><br/></div>
+              </div>
+            
+              <div style="padding: 15px;display: flex;">
+                  <div style="width: 50%;"><strong>Corporate Email ID: ${tempObj.CorporateEmail}</strong></div>
+                  <div style="width: 50%;"><strong>Personal Email ID: ${tempObj.Email}</strong><br/></div>
+              </div>
+              <div style="padding: 15px;display: flex;">
+                  <div style="width: 50%;"><strong>Work Number: ${tempObj.OfficeNum}</strong></div>
+                  <div style="width: 50%;"><strong>Personal Number: ${tempObj.MobileNum}</strong><br/></div>
+              </div>
+            </div>
+          </div>`
+            
+            })
+        })
+
     function init() {
         const dataObj = JSON.parse(localStorage.getItem('SearchData'))
         if (dataObj !== null) {
@@ -120,6 +162,8 @@ function appendRows(data) {
             "<a href='' data-id='" + data[i]._id + "' class='bookmark-link'><img src='/assets/images/svgs/bookmark.svg' class='bookmark' alt='' onclick='toggleBookmark(this)'></a>" +
             "</td>" +
             "</tr>")
+
+            rData.push({...data[i]})
     }
 }
 

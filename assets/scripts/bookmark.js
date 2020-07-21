@@ -7,7 +7,7 @@ $(document).ready(function () {
 		Bookmarks = JSON.parse(localStorage.getItem('Bookmarks'));
 	}
 
-	$('#searchTable').on("click", "tr td a", function (e) {
+	$('#searchTable').on("click", "tr td a img", function (e) {
 		e.preventDefault()
 		var $row = $(this).closest('tr');
 		var $tds = $row.find('td')
