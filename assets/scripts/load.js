@@ -1,4 +1,5 @@
 var Bookmarks = JSON.parse(localStorage.getItem('Bookmarks'))
+console.log(Bookmarks)
 var rData = []
 $(document).ready(function () {
     var $favs
@@ -6,6 +7,7 @@ $(document).ready(function () {
     $('.load-btn').on('click', function (e) {
         e.preventDefault()
         count++;
+        $('.load-btn').hide()
         const CountryElement = document.getElementById('country').value
         const CityElement = document.getElementById('city-trigger').value
         const xhr = new XMLHttpRequest()
@@ -39,8 +41,11 @@ $(document).ready(function () {
                     $('.load-btn').hide()
                 } else {
                     appendRows(ResponseData.data)
+                    $('.load-btn').show()
                 }
-
+                $favs = $('.bookmark-link')
+                console.log($favs)
+                    checkFavorite($favs)
             } else {
                 console.log("ERROR: AJAX COULD NOT CONNECT");
             }
@@ -79,8 +84,12 @@ $(document).ready(function () {
                         timer: 2000
                     })
                 }
-
+               
                 appendRows(data)
+                $favs = $('.bookmark-link')
+                console.log($favs)
+                checkFavorite($favs)
+                
                 $('.load-btn').show()
             } else {
                 console.log("ERROR: AJAX COULD NOT CONNECT");
@@ -89,7 +98,7 @@ $(document).ready(function () {
         xhr.send(`country=${CountryElement}&city=${CityElement}&pageNo=1`)
     })
 
-    $('#searchTable').on('click','tr', function(e){
+    $('#searchTable').on('click','.companyname', function(e){
         e.preventDefault()
         // console.log(rData)
       var $idx=   $(this).index()
@@ -139,9 +148,7 @@ $(document).ready(function () {
             appendRows(dataObj.data)
             $favs = $('.bookmark-link')
             console.log($favs)
-            if(Bookmarks!==undefined){
-                checkFavorite($favs)
-            }
+            checkFavorite($favs)
             localStorage.removeItem('SearchData')
         }
     }
@@ -150,33 +157,38 @@ $(document).ready(function () {
 
 function appendRows(data) {
     for (var i in data) {
-        $('.search-data-table').find('tbody').append("<tr class='search-data-row'>" +
-            "<td>" + data[i].CompanyName +
-            "<br /><a href='' class='company-link'>" + data[i].CorporateEmail + "</a>" +
-            "</td>" +
-            "<td>" +
-            `<a href='mailto:${data[i].CorporateEmail}'>` + data[i].CorporateEmail + "</a></td>" +
-            "<td>" + data[i].MobileNum +
-            "</td>" +
-            "<td>" +
-            "<a href='' data-id='" + data[i]._id + "' class='bookmark-link'><img src='/assets/images/svgs/bookmark.svg' class='bookmark' alt='' onclick='toggleBookmark(this)'></a>" +
-            "</td>" +
-            "</tr>")
+        $('.search-data-table').find('tbody').append(`<tr class='search-data-row'>` +
+            `<td class='companyname' title='Click to get full information'>${data[i].CompanyName}` +
+            `<br /><a href='' class='company-link'> ${data[i].CorporateEmail}</a>` +
+            `</td>` +
+            `<td>` +
+            `<a href='mailto:${data[i].CorporateEmail}'>${data[i].CorporateEmail}</a></td>` +
+            `<td>${data[i].MobileNum}` +
+            `</td>` +
+            `<td>` +
+            `<a href='' data-id=${data[i]._id} class='bookmark-link'><img src='/assets/images/svgs/bookmark.svg' class='bookmark' alt='' onclick='toggleBookmark(this)'></a>` +
+            `</td>` +
+            `</tr>`)
 
             rData.push({...data[i]})
     }
 }
 
 function checkFavorite(data){
-   for(let i=0;i<data.length;i++){
-       for(let j=0;j<Bookmarks.length;j++)
-       {
-        //    console.log(Bookmarks[j])
-           if(Bookmarks[j].id === data[i].attributes[1].value){
-               data[i].childNodes[0].classList.add('bookmark-click')
-           }
-       }
-   }
+    if(Bookmarks === null){
+        return false;
+
+    }
+        for(let i=0;i<data.length;i++){
+            for(let j=0;j<Bookmarks.length;j++)
+            {
+             //    console.log(Bookmarks[j])
+                if(Bookmarks[j].id === data[i].attributes[1].value){
+                    data[i].childNodes[0].classList.add('bookmark-click')
+                }
+            }
+        }
+  
 
     // Bookmarks.forEach((b)=> {
     //     if(b.id === element[0].attributes[1].value){

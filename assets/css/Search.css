@@ -64,6 +64,9 @@
     width: 37%;
 }
 
+.companyname{
+    cursor: pointer;
+}
 .email-clm {
     width: 28%;
 }

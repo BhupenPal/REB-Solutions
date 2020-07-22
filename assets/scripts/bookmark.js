@@ -11,7 +11,7 @@ $(document).ready(function () {
 		e.preventDefault()
 		var $row = $(this).closest('tr');
 		var $tds = $row.find('td')
-		console.log($tds[3].childNodes[0].attributes[1].value)
+		console.log(rData)
 		if(isBookmarked($tds[3].childNodes[0].attributes[1].value)){
 			console.log('deleting')
 			deleteFavorite($tds[3].childNodes[0].attributes[1].value)
