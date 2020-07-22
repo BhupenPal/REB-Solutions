@@ -38,6 +38,7 @@
 .search-page-container {
     width: 85%;
     margin: 0 50% 0 4%;
+    overflow-x: auto;
 }
 
 .search-data-table {
