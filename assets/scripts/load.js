@@ -101,7 +101,8 @@ $(document).ready(function () {
     $('#searchTable').on('click','.companyname', function(e){
         e.preventDefault()
         // console.log(rData)
-      var $idx=   $(this).index()
+      var $tr=   $(this).closest('tr')
+      var $idx= $($tr).index()
       var tempObj= rData[$idx]
         console.log(tempObj)
         return Swal.fire({

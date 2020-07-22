@@ -17,7 +17,8 @@ $(document).ready(function () {
   $('#bookmarkTable').on('click','.companyname', function(e){
     e.preventDefault()
     // console.log(rData)
-  var $idx=   $(this).index()
+    var $tr=   $(this).closest('tr')
+    var $idx= $($tr).index()
   console.log($idx)
 var tempObj = Bookmarks[$idx]
     console.log(tempObj)
