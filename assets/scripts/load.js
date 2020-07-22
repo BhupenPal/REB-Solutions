@@ -172,6 +172,10 @@ function appendRows(data) {
 
             rData.push({...data[i]})
     }
+    if(rData.length > 0)
+    {
+        localStorage.setItem('data' , JSON.stringify(rData))
+    }
 }
 
 function checkFavorite(data){
@@ -183,7 +187,7 @@ function checkFavorite(data){
             for(let j=0;j<Bookmarks.length;j++)
             {
              //    console.log(Bookmarks[j])
-                if(Bookmarks[j].id === data[i].attributes[1].value){
+                if(Bookmarks[j]._id === data[i].attributes[1].value){
                     data[i].childNodes[0].classList.add('bookmark-click')
                 }
             }
