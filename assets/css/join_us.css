@@ -1,0 +1,261 @@
+.join-page {
+    padding-top: 100px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+}
+
+.join-container {
+    display: flex;
+    width: 80%;
+    margin: 0px auto 40px;
+    justify-content: space-between;
+}
+
+.join-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.join-details h1 {
+    font-weight: 600;
+    font-size: 34px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.line {
+    width: 415px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 10px 0;
+    outline: none;
+    margin-top: 30px;
+}
+
+textarea {
+    resize: none;
+}
+
+#join-btn {
+    background-color: #136AEC;
+    width: 190px;
+    height: 45px;
+    font-size: 23px;
+    color: #FFFFFF;
+    margin-top: 40px;
+    font-family: Poppins;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.join-illus {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.join-illus img {
+    width: 100%;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width:576px) {
+    .join-page {
+        padding-top: 85px;
+    }
+
+    .join-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto 8vh;
+    }
+
+    .join-details {
+        width: 90%;
+    }
+
+    .join-illus {
+        width: 90%;
+        height: 70vw;
+    }
+
+    .join-details h1 {
+        font-size: 5.9vw;
+        margin: 4vw 0;
+    }
+
+    .line {
+        width: 72vw;
+        margin: 0;
+    }
+
+    input,
+    textarea {
+        width: 69.4vw;
+        font-size: 3.47vw;
+        margin-top: 5.2vw;
+    }
+
+    #join-btn {
+        width: 32.94vw;
+        height: 7.8vw;
+        font-size: 4vw;
+        margin-top: 7vw;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .join-page {
+        padding-top: 85px;
+    }
+
+    .join-container {
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0 auto 8vh;
+    }
+
+    .join-details {
+        width: 70%;
+        margin: 0;
+    }
+
+    .join-illus {
+        width: 70%;
+        height: 55vw;
+        margin: 0 auto;
+    }
+
+    .join-details h1 {
+        font-size: 4.5vw;
+        margin: 3vw 0;
+    }
+
+    .line {
+        width: 54vw;
+        margin: 0;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        font-size: 2.8vw;
+        margin-top: 4vw;
+    }
+
+    #join-btn {
+        width: 24.7vw;
+        height: 5.9vw;
+        font-size: 3vw;
+        margin-top: 5.8vw;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .join-page {
+        padding-top: 90px;
+    }
+
+    .join-container {
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+        margin: 2vw auto 5vw 7%;
+    }
+
+    .join-details {
+        width: 50%;
+        margin: 0;
+    }
+
+    .join-illus {
+        width: 50%;
+        height: 40vw;
+        margin: 0 auto;
+    }
+
+    .join-details h1 {
+        font-size: 3vw;
+        margin: 2.3vw;
+    }
+
+    .line {
+        width: 41.8vw;
+        margin: 0;
+    }
+
+    input,
+    textarea {
+        width: 40.3vw;
+        font-size: 2vw;
+        margin-top: 3vw;
+    }
+
+    #join-btn {
+        width: 17vw;
+        height: 4.2vw;
+        font-size: 2.1vw;
+        margin-top: 4.5vw;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .join-page {
+        padding-top: 90px;
+    }
+
+    .join-container {
+        width: 90%;
+        align-items: center;
+    }
+
+    .join-details h1 {
+        font-size: 2.85vw;
+        margin: 1.91vw 0;
+    }
+
+    .line {
+        width: 34.6vw;
+        margin: 0;
+    }
+
+    input,
+    textarea {
+        width: 33.35vw;
+        font-size: 1.67vw;
+        margin-top: 2.5vw;
+    }
+
+    #join-btn {
+        width: 15.85vw;
+        height: 3.75vw;
+        font-size: 1.91vw;
+        margin-top: 3.8vw;
+    }
+
+    .join-illus {
+        width: 45%;
+    }
+}

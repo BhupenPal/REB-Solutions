@@ -33,10 +33,15 @@
     <div class="ham-menu">
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="">Find Companies</a></li>
-            <li><a href="">Bookmark</a></li>
-            <li><a href="">Join Us</a></li>
+            <li><a href="/search">Find Companies</a></li>
+            <li><a href="/user/bookmark">Bookmark</a></li>
+            <% if(!user) { %>
+            <li><a href="/join-us">Join Us</a></li>
             <li><a href="/user/login">Login</a></li>
+            <% } else { %>
+            <li><a href="/user/dashboard">Dashboard</a></li>
+            <li><a href="/user/logout">Logout</a></li>
+            <% } %>
         </ul>
         <a href="" id="bell-ham"><img src="/assets/images/svgs/bell.svg" alt="" /></a>
     </div>

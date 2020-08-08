@@ -7,7 +7,7 @@ Router.get("/", (req, res, next) => {
 });
 
 Router.get("/join-us", (req, res, next) => {
-    res.send("Join Us");
+    res.render("Join_Us");
 });
 
 Router.get("/search", ensureAuthenticated , (req, res, next) => {

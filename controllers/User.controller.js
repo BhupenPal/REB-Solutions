@@ -25,7 +25,12 @@ Router.get('/dashboard', ensureAuthenticated, (req, res, next) => {
     res.render('Dashboard')
 })
 
-Router.get('/bookmark' , ensureAuthenticated , (req,res)=> {
+Router.get('/bookmark', ensureAuthenticated, (req, res) => {
     res.render('bookmarks')
 })
+
+Router.get('/reset', (req, res) => {
+    res.render('forgot_pass')
+})
+
 module.exports = Router
