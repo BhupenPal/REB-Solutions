@@ -17,12 +17,12 @@
 
     <div class="join-page">
         <div class="join-container">
-            <form action="" method="POST" class="join-details">
+            <form action="/join-us" method="POST" class="join-details">
                 <h1>Welcome to REB Solutions</h1>
                 <%-include('./Components/Flash.ejs') %>
                 <div class="line"></div>
-                <input type="text" id="user-name" placeholder="Full Name" name="Name" />
-                <input type="text" placeholder="Contact Number" name="contact-number" />
+                <input type="text" id="user-name" placeholder="Full Name" name="FullName" />
+                <input type="text" placeholder="Contact Number" name="ContactNumber" />
                 <input type="email" id="user-email" placeholder="Email" name="Email" />
                 <textarea name="message" id="join-msg" cols="30" rows="3" placeholder="Message"></textarea>
                 <button type="submit" id="join-btn">Join Us</button>
